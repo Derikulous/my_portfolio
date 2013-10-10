@@ -5,7 +5,7 @@ feature "Creates a Post" do
 
       # Given a completed post form
       visit posts_path
-      click_on "New Post"
+      click_on "New"
       fill_in 'Title', :with => 'a new hope'
       fill_in 'Content', :with => 'a long time ago and far far away'
 
@@ -13,10 +13,8 @@ feature "Creates a Post" do
       click_on 'Create Post'
 
       # Then I should see the new post
-      page.text.must_include 'a new hope'
-      page.text.must_include 'a long time ago'
+      page.must_have_content 'a new hope'
+      page.must_have_content 'a long time ago'
 
-      # And a success message
-      page.text.must_include 'Post was successfully created'
   end
 end

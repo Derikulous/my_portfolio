@@ -3,8 +3,8 @@ require "test_helper"
 feature "Edit Post" do
   scenario "submit edited updates to a post" do
 
-    #Given an edited post
-    visit post_path(@post)
+    # Given an edited post
+    visit post_path(posts(:oz))
     click_on "Edit"
     fill_in 'Title', :with => 'Yoda was wise'
     fill_in 'Content', :with => 'There is no try.'
