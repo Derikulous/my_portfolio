@@ -15,6 +15,11 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+# config.generators do |g|
+#     g.test_framework :mini_test, :spec => true
+#     g.helper false
+# end
+
 module Portfolio
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -64,5 +69,5 @@ module Portfolio
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-  end
+end
 end
