@@ -9,12 +9,11 @@ gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem 'uglifier', '>= 1.0.3'
 
 gem 'jquery-rails'
-
+gem 'sqlite3'
 
 group :development, :test do
   gem "minitest-rails"
   gem 'turn'
-  gem 'sqlite3'
 end
 
 group :test do
@@ -23,6 +22,7 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'pg'
 end
 
 gem 'unicorn'
