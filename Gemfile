@@ -12,7 +12,6 @@ gem 'jquery-rails'
 gem 'sqlite3'
 
 group :development, :test do
-  gem "minitest-rails"
   gem 'turn'
 end
 
@@ -26,3 +25,4 @@ group :production do
 end
 
 gem 'unicorn'
+gem "minitest-rails"
