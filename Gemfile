@@ -9,10 +9,11 @@ gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem 'uglifier', '>= 1.0.3'
 
 gem 'jquery-rails'
-gem 'sqlite3'
+
 
 group :development, :test do
   gem 'turn'
+  gem 'sqlite3'
 end
 
 group :test do
