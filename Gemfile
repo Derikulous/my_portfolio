@@ -1,33 +1,25 @@
 source 'https://rubygems.org'
-
+ruby '2.0.0'
 gem 'rails', '3.2.14'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
-
-
-# Gems used only for assets and not required
-# in production environments by default.
 gem 'sass-rails',   '~> 3.2.3'
 gem 'coffee-rails', '~> 3.2.1'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem 'uglifier', '>= 1.0.3'
 
 gem 'jquery-rails'
-gem "minitest-rails"
 
 
 group :development, :test do
   gem "minitest-rails"
   gem 'turn'
+  gem 'sqlite3'
 end
 
 group :test do
   gem "minitest-rails-capybara"
+  gem 'sqlite3'
 end
 
 gem 'rails_12factor', group: :production
-
-ruby '2.0.0'
+gem 'pg'
