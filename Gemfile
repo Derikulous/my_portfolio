@@ -2,13 +2,14 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '3.2.14'
 
-gem 'sass-rails',   '~> 3.2.3'
-gem 'coffee-rails', '~> 3.2.1'
-gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
-gem 'uglifier', '>= 1.0.3'
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
+  gem 'uglifier', '>= 1.0.3'
 
-gem 'jquery-rails'
-
+  gem 'jquery-rails'
+end
 
 group :development, :test do
   gem "minitest-rails"
@@ -21,5 +22,6 @@ group :test do
   gem 'sqlite3'
 end
 
-gem 'rails_12factor', group: :production
-gem 'pg'
+group :production do
+  gem 'rails_12factor'
+end
