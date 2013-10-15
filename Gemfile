@@ -12,6 +12,7 @@ group :development, :test do
   gem 'sqlite3'
   gem "minitest-rails-capybara"
   gem "capybara-webkit"
+  gem 'simplecov', :require => false
 end
 
 group :production do
@@ -24,3 +25,4 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
+
