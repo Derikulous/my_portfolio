@@ -13,37 +13,34 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    @project = Project.find(params[:id])
   end
 
   def create
     @project = Project.new(params[:project])
 
     if @project.save
-      flash[:notice] = "Project has been created."
+      flash[:notice] = "Project has been created"
       redirect_to @project
     else
-      render 'new'
+      flash[:alert] = "Project could not be saved"
+      render :new
     end
   end
 
   def update
+    @project = Project.find(params[:id])
+
     if @project.update_attributes(params[:project])
-      flash[:success] = "Successfully updated"
-      redirect_to @project
+      redirect_to @project, notice: 'Project was successfully updated'
     else
-      render 'edit'
+      render :edit
     end
   end
 
   def destroy
-    Project.find(params[:id]).destroy
-    flash[:success] = "Project deleted."
-    redirect_to projects_url
-  end
-
-  private
-
-  def project_params
-    params.require(:project).permit(:name, :technologies_used)
+    @project = Project.find(params[:id])
+    @project.destroy
+    redirect_to @project, notice: 'Project was successfully deleted'
   end
 end

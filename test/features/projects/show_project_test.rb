@@ -1,16 +1,11 @@
-require "test_helper"
+require 'test_helper'
+  feature "Check main page of a single project is functioning properly" do
+    scenario "project page is loading properly" do
+      # visit project page
+      visit projects_path(projects(:one))
 
-feature "As the site visitor, I want to see a developer's portfolio" do
-  scenario "show project specific page" do
-    #Given that I have a project
-    visit project_path(projects[:two])
-    # When I visit the project page
-    fill_in "Name", :with => "KFreezePop"
-    click_on "Update Project"
-
-    # Then I should see the project specifics
-    page.text.must_include "Success"
-    page.text.must_include "KFreezePop"
-    page.text.wont_include "Code Fellows Portfolio"
+      # Check to see if the name is correct
+      page.text.must_include "Game of Thrones"
+      page.text.must_include "Deception"
+    end
   end
-end

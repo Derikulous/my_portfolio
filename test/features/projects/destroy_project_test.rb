@@ -4,13 +4,16 @@ feature "As a site owner, I want to delete a portfolio item so that I can keep t
   scenario "Deleting an existing project" do
 
     # Given that I have a project
-    visit project_path(projects[:one])
+    visit projects_path
 
     # When I click the delete button
-    click_on "Delete Project"
+    click_link("Destroy", href: "/projects/#{projects(:two).id}")
 
-    # Then I should no longer see a project
-    page.text.must_include "Success"
-    page.text.must_include "Project deleted"
-    page.text.wont_include "Code Fellows Portfolio"
+    # page must display that project was successfully deleted
+    page.text.must_include "Project was successfully deleted"
 
+     # page must not have deleted info
+    page.text.wont_include "Game of Thrones"
+    page.text.wont_include "Deception"
+  end
+end
