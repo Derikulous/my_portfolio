@@ -14,6 +14,7 @@ group :development, :test do
   gem "minitest-rails-capybara"
   gem "capybara-webkit"
   gem 'simplecov', :require => false
+  gem 'launchy'
 end
 
 group :production do

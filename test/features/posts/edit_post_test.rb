@@ -4,16 +4,17 @@ feature "Edit Post" do
   scenario "submit edited updates to a post" do
 
     # Given an edited post
-    visit post_path(posts(:oz))
-    click_on "Edit"
-    fill_in 'Title', :with => 'Yoda was wise'
-    fill_in 'Content', :with => 'There is no try.'
+    sign_in
+
+    visit post_path(posts(:cr))
 
     # When I submit the form
+    click_on 'Edit'
+    fill_in 'Title', with: "Becoming a Web Developer"
     click_on 'Update Post'
 
     # Then I should see the updated post
-    page.text.must_include 'Yoda'
-    page.text.must_include 'There is no try.'
+    page.text.must_include "Post was successfully updated"
+    page.text.must_include "Web Developer"
   end
 end

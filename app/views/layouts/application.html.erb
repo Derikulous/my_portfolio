@@ -9,10 +9,7 @@
 <body>
   <% if current_user.present? %>
     <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %> </li>
-    <% else %>
-    <li><%= link_to "Sign Up", new_user_registration_path %></li>
-    <li><%= link_to "Sign in", new_user_session_path %></li>
-    <% end %>
+  <% end %>
 
   <% flash.each do |key, value| %>
     <div class="<%= flash_class(key) %>">

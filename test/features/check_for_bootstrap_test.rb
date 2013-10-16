@@ -5,7 +5,7 @@ feature "Check for Twitter Bootstrap" do
 
     # Given an html body
     # When I visit the page
-    visit posts_path
+    visit root_path
     # Then I should see the jumbotron div class
     page.body.must_include "btn-primary"
   end

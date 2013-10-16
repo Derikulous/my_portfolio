@@ -5,18 +5,14 @@ feature "As a user, I want to be able to sign out so that my session is closed" 
 
     # Given a signed in user
     visit new_user_session_path
-    fill_in "Email", with: users(:one).email
-    fill_in "Password", with: "password"
-    click_on "Sign in"
-
-    page.must_have_content "Signed in successfully"
-    page.must_have_content "Sign out"
+    sign_in
 
     # When the sign out is clicked
-    click_on "Sign out"
+    click_on "Sign Out"
 
     #Then the session should be destroyed
-    page.must_have_content "Signed out succesffuly"
+
+    page.must_have_content "Signed out successfully"
     page.wont_have_content "Sign out"
   end
 end
