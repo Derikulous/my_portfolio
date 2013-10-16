@@ -6,6 +6,7 @@ gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem 'jquery-rails'
 gem 'unicorn'
 gem "minitest-rails"
+gem 'devise'
 
 group :development, :test do
   gem 'turn'
