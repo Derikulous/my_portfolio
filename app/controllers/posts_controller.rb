@@ -1,9 +1,12 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
-  # GET /posts
-  # GET /posts.json
+
   def index
-    @posts = policy_scope(Post)
+    if current_user
+      @posts = policy_scope(Post)
+    else
+      @posts = Post.where(published: true)
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -11,8 +14,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/1
-  # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
 
@@ -22,8 +23,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/new
-  # GET /posts/new.json
   def new
     @post = Post.new
 
@@ -33,16 +32,13 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
   end
 
-  # POST /posts
-  # POST /posts.json
   def create
+    authorize @post
     @post = Post.new(params[:post])
-    current_user.posts << @post
 
     respond_to do |format|
       if @post.save
@@ -56,9 +52,8 @@ class PostsController < ApplicationController
     end
   end
 
-  # PUT /posts/1
-  # PUT /posts/1.json
   def update
+    authorize @post
     @post = Post.find(params[:id])
 
     respond_to do |format|
@@ -72,9 +67,9 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.json
+
   def destroy
+    authorize @post
     @post = Post.find(params[:id])
     @post.destroy
 
