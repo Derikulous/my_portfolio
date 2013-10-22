@@ -53,11 +53,11 @@ feature "Deleting a Post" do
     visit posts_path
     click_link("Destroy", href: "/posts/#{post_id}")
 
-     # Then the page won't have deleted content
-     page.wont_have_content "hear me roar!"
-   end
+    # Then the page won't have deleted content
+    page.wont_have_content "hear me roar!"
+  end
 
-   scenario "author can delete unpublished posts" do
+  scenario "author can delete unpublished posts" do
     # Given an unpublished author post
     post_id = set_up_a_post_by_author
     click_on "Back"
