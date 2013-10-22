@@ -7,6 +7,7 @@ gem 'jquery-rails'
 gem 'unicorn'
 gem "minitest-rails"
 gem 'devise'
+gem 'pundit'
 
 group :development, :test do
   gem 'turn'

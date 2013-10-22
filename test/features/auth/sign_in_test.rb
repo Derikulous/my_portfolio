@@ -1,16 +1,17 @@
 require 'test_helper'
 
-feature "As a user, I want to be able to sign in so that I can post to the blog" do
-  scenario "Sign in" do
+feature "Authorize Signup" do
+  scenario "Sign in works" do
 
     # Given an existing user
     visit root_path
     click_link "Sign in"
 
     # When the user creates a new session
-    sign_in
+    sign_in(:one)
 
     # Then the user should be signed in
     page.must_have_content "Signed in successfully."
+    page.text_wont_include "Sign In"
   end
 end

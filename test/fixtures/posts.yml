@@ -2,8 +2,16 @@ oz:
   title: Pick yo Knight!
   content: Axe Knight. Good choice dawg!
   author: one
+  published: true
 
 cr:
   title: Code Rails
   content: This is how I learned web development
-  author: one
+  author: two
+  published: true
+
+cz:
+  title: Murakami
+  content: Norwegian Wood is a great read
+  author: two
+  published: true

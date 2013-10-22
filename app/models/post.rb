@@ -1,4 +1,10 @@
 class Post < ActiveRecord::Base
-  attr_accessible :content, :title
+  attr_accessible :content, :title, :published
   belongs_to :author, class_name: "User"
+  scope :published, where(published: true)
+
+  def publish!
+    published = true
+    save!
+  end
 end
