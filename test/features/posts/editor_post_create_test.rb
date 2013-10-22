@@ -1,18 +1,18 @@
 require "test_helper"
 
 feature "Editor creates a post" do
-  scenario "editor publihes a post" do
+  scenario "editor publishes a post" do
 
     # Given a signed in editor
     sign_in(:one)
     visit posts_path
 
     # Page will have an unpublished post
-    fill_in "Title", with: posts(:oz).title
-    fill_in "Content", with: posts(:oz).content
+    page.text.must_include 'Pick yo Knight!'
+    page.text.must_include 'Publish'
 
     # When the editor clicks the Create Post
-    click_on 'Create Post'
+    click_link 'Publish'
 
     # sign out
     click_on 'Sign Out'
