@@ -8,6 +8,7 @@ gem 'unicorn'
 gem "minitest-rails"
 gem 'devise'
 gem 'pundit'
+gem 'pry-rails'
 
 group :development, :test do
   gem 'turn'

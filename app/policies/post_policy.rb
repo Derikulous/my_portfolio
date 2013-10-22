@@ -7,24 +7,22 @@
     end
 
     def create?
-      if user.present?
-        user.author? || user.editor?
-      end
+      user.author? || user.editor? if user.present?
     end
-
-    alias_method :update?, :create?
 
     def publish?
-      if user.present?
-        user.editor?
-      end
+      user.editor? if user.present?
     end
 
-    def destroy?
-      if user.present?
-        return true if user.editor?
-      end
+    def update?
+      post.authored_by?(user) || user.editor? if user.present?
     end
+    alias_method :destroy?, :update?
+
+    def destroy?
+      post.authored_by?(user) || user.editor? if user.present?
+    end
+
 
     PostPolicy = Struct.new(:user, :post) do
       Scope = Struct.new(:user, :scope) do

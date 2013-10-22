@@ -10,36 +10,29 @@
     <th></th>
   </tr>
 
-  <% @posts.each do |post| %>
+<% @posts.each do |post| %>
   <tr id="<%= dom_id(post) %>">
     <td><%= post.title %></td>
     <td><%= post.content %></td>
     <td><%= link_to 'Show', post %></td>
     <% if policy(post).update? %>
-    <td>
-      <%= link_to 'Edit', edit_post_path(post) %>
-      <p><%= "Published" if post.published %></p>
-    </td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <% end %>
     <% if post.published? == false && policy(post).publish?%>
-    <td>
-      <%= link_to 'Publish', post_path(post, post: { published: true }), method: :put, data: { confirm: 'Are you sure you want to publish?' }%>
-    </td>
+      <td><%= link_to 'Publish', post_path(post, post: { published: true }), method: :put, data: { confirm: 'Are you sure you want to publish?' }%></td>
     <% end %>
     <% if post.published? && policy(post).publish?%>
-    <td>
-      <%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?' }%>
-    </td>
+      <td><%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?' }%></td>
     <% end %>
     <% if policy(post).destroy? %>
-    <td>
-      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-    </td>
+      <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
   </tr>
-  <% end %>
+<% end %>
 </table>
 
 <br />
 
+<% if current_user.present? %>
 <%= link_to 'New Post', new_post_path, class: "btn btn-default"%>
+<% end %>
