@@ -1,0 +1,38 @@
+<div class="comment_form">
+  <% if @comment.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+    <ul>
+      <% @comment.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <%= form_for [@post, @comment] do |f| %>
+  <fieldform>
+    <div>
+      <%= f.field :author, "Add your name" %>
+      <%= f.text_field :author %>
+    </div>
+    <div>
+      <%= f.field :author_email, "Add email address" %>
+      <%= f.text_field :author_email %>
+    </div>
+    <div>
+      <%= f.field :author_url, "URL?" %>
+      <%= f.text_field :author_url %>
+    </div>
+    <div>
+      <%= f.field :content, "Add comment" %>
+      <%= f.text_area :content %>
+    </div>
+    <%= f.hidden_field :referrer, value: request.referrer %>
+    <%= f.hidden_field :post_id, value: @post.id %>
+    <div class="actions">
+      <%= f.submit "Submit comment for approval" %>
+    </div>
+    <% end %>
+  </fieldform>

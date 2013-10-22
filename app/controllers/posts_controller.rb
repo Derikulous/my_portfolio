@@ -16,6 +16,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
 
     respond_to do |format|
       format.html # show.html.erb
@@ -39,6 +40,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params[:post])
     @post.author = current_user
+    @comment = Comment.new
 
     respond_to do |format|
       if @post.save
@@ -68,7 +70,6 @@ class PostsController < ApplicationController
 
 
   def destroy
-
     @post = Post.find(params[:id])
     @post.destroy
 
