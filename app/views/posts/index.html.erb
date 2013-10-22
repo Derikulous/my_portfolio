@@ -4,6 +4,10 @@
   <tr>
     <th>Title</th>
     <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
   <% @posts.each do |post| %>
@@ -18,13 +22,19 @@
     </td>
     <% end %>
     <% if post.published? == false && policy(post).publish?%>
-    <td><%= link_to 'Publish', post_path(post, post: { published: true }), method: :put, data: { confirm: 'Are you sure you want to publish?' }%></td>
+    <td>
+      <%= link_to 'Publish', post_path(post, post: { published: true }), method: :put, data: { confirm: 'Are you sure you want to publish?' }%>
+    </td>
     <% end %>
     <% if post.published? && policy(post).publish?%>
-    <td><%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?' }%></td>
+    <td>
+      <%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?' }%>
+    </td>
     <% end %>
     <% if policy(post).destroy? %>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+    <td>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+    </td>
     <% end %>
   </tr>
   <% end %>
@@ -32,4 +42,4 @@
 
 <br />
 
-<%= link_to 'New Post', new_post_path, class: "btn btn-default" if policy(Post).create? %>
+<%= link_to 'New Post', new_post_path, class: "btn btn-default"%>

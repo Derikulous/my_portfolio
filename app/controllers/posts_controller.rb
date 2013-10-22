@@ -53,7 +53,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    authorize @post
     @post = Post.find(params[:id])
 
     respond_to do |format|
@@ -69,7 +68,7 @@ class PostsController < ApplicationController
 
 
   def destroy
-    authorize @post
+
     @post = Post.find(params[:id])
     @post.destroy
 
