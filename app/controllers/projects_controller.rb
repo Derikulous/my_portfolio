@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
 
   def index
     @projects = Project.all
@@ -10,6 +11,9 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @commentable = @project
+    @comments = @commentable.comments
+    @comment = Comment.new
   end
 
   def edit

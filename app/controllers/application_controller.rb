@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::Base
   include Pundit
   protect_from_forgery
-
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+  rescue_from ActiveRecord::RecordNotFound, with: :page_not_found
+  rescue_from ActionController::RoutingError, with: :page_not_found
 
   private
 

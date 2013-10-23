@@ -19,11 +19,6 @@ class PostsController < ApplicationController
     @commentable = @post
     @comments = @commentable.comments
     @comment = Comment.new
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @post }
-    end
   end
 
   def new
