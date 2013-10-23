@@ -9,6 +9,7 @@ gem "minitest-rails"
 gem 'devise'
 gem 'pundit'
 gem 'pry-rails'
+gem 'rakismet'
 
 group :development, :test do
   gem 'turn'
