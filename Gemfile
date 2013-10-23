@@ -5,19 +5,26 @@ gem 'rails', '3.2.14'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem 'jquery-rails'
 gem 'unicorn'
-gem "minitest-rails"
 gem 'devise'
 gem 'pundit'
-gem 'pry-rails'
+
 gem 'rakismet'
+gem 'omniauth-twitter'
+gem 'figaro'
 
 group :development, :test do
   gem 'turn'
   gem 'sqlite3'
-  gem "minitest-rails-capybara"
-  gem "capybara-webkit"
+  gem 'minitest-rails-capybara'
+  gem 'minitest', '> 4.0'
+  gem 'minitest-rails'
+  gem 'minitest-focus'
+  gem 'minitest-colorize'
+  gem 'capybara-webkit'
   gem 'simplecov', :require => false
   gem 'launchy'
+  gem 'pry-rails'
+  gem 'pry-debugger'
 end
 
 group :production do
