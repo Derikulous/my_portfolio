@@ -20,10 +20,10 @@
   <%= f.text_area :content %>
 </div>
 <% if policy(Post).publish? %>
-<div class="field">
-  <%= f.label :published %>
-  <%= f.check_box :published %>
-</div>
+  <div class="field">
+    <%= f.label :published %>
+    <%= f.check_box :published %>
+  </div>
 <% end %>
 <div class="actions">
   <%= f.submit %>
