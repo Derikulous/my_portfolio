@@ -14,19 +14,19 @@
   <%= form_for [@post, @comment] do |f| %>
   <fieldform>
     <div>
-      <%= f.field :author, "Add your name" %>
+      <%= f.label :author, "Add your name" %>
       <%= f.text_field :author %>
     </div>
     <div>
-      <%= f.field :author_email, "Add email address" %>
+      <%= f.label :author_email, "Add email address" %>
       <%= f.text_field :author_email %>
     </div>
     <div>
-      <%= f.field :author_url, "URL?" %>
+      <%= f.label :author_url, "URL?" %>
       <%= f.text_field :author_url %>
     </div>
     <div>
-      <%= f.field :content, "Add comment" %>
+      <%= f.label :content, "Add comment" %>
       <%= f.text_area :content %>
     </div>
     <%= f.hidden_field :referrer, value: request.referrer %>

@@ -40,7 +40,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params[:post])
     @post.author = current_user
-    @comment = Comment.new
 
     respond_to do |format|
       if @post.save

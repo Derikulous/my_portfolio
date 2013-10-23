@@ -3,8 +3,9 @@ require 'test_helper'
 feature "As an author or editor, I want to approve comments" do
   scenario "A comment cannot be displayed until they approved by an author" do
 
-    # Given a post path
-
+    # Given an authorized user
+    sign_in(:two)
+    visit posts_path
     # A set of comments will be pending
 
     # When I click on approve

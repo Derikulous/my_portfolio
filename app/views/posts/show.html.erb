@@ -11,8 +11,7 @@
   <%= @post.author.email %>
 </p>
 
-<% if policy(@post).update? %>
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-<% end %>
+<%= link_to 'Edit Post', edit_post_path(@post) %> |
+
 <%= render 'comments/form' %>
-<%= link_to 'Back to the blog', posts_path %> |
+<%= link_to 'Back to the blog', posts_path %>
