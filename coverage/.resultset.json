@@ -21,6 +21,39 @@
         1,
         128,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/stratta1/Portfolio/app/controllers/application_controller.rb": [
@@ -64,6 +97,10 @@
         1,
         null
       ],
+      "/Users/stratta1/Portfolio/app/helpers/omniauth_callbacks_helper.rb": [
+        1,
+        null
+      ],
       "/Users/stratta1/Portfolio/app/helpers/posts_helper.rb": [
         1,
         null
@@ -102,6 +139,21 @@
         1,
         null,
         null,
+        null
+      ],
+      "/Users/stratta1/Portfolio/app/controllers/omniauth_callbacks_controller.rb": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        1,
         null
       ],
       "/Users/stratta1/Portfolio/app/controllers/posts_controller.rb": [
@@ -254,7 +306,7 @@
       "/Users/stratta1/Portfolio/app/models/project.rb": [
         1,
         1,
-        null,
+        1,
         1,
         1,
         null
@@ -345,6 +397,6 @@
         null
       ]
     },
-    "timestamp": 1382505577
+    "timestamp": 1382511719
   }
 }
