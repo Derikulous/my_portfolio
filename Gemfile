@@ -7,17 +7,16 @@ gem 'jquery-rails'
 gem 'unicorn'
 gem 'devise'
 gem 'pundit'
-
 gem 'rakismet'
 gem 'omniauth-twitter'
 gem 'figaro'
 
 group :development, :test do
+  gem 'minitest'
+  gem 'minitest-rails'
   gem 'turn'
   gem 'sqlite3'
   gem 'minitest-rails-capybara'
-  gem 'minitest', '> 4.0'
-  gem 'minitest-rails'
   gem 'minitest-focus'
   gem 'minitest-colorize'
   gem 'capybara-webkit'
@@ -37,4 +36,3 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
-

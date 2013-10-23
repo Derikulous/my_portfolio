@@ -8,6 +8,8 @@ require "minitest/rails"
 require "minitest/spec"
 require "minitest/rails/capybara"
 require "minitest/pride"
+require "minitest/focus"
+require "minitest/colorize"
 
 include Capybara::DSL
 include Devise::TestHelpers
@@ -28,6 +30,3 @@ class ActiveSupport::TestCase
 end
 
 Turn.config.format = :outline
-
-
-
