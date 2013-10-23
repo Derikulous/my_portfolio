@@ -15,7 +15,8 @@ feature "Authorize Signup" do
     page.text.wont_include "Sign In"
   end
 
-  scenario "sign in with twitter works" do visit root_path click_on
+  scenario "sign in with twitter works" do
+    visit root_path click_on
     "Sign In" OmniAuth.config.test_mode = true
     Capybara.current_session.driver.request.env['devise.mapping'] =
     Devise.mappings[:user]
