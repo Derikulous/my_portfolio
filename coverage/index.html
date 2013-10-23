@@ -14,7 +14,7 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-10-22T18:13:04-07:00">2013-10-22T18:13:04-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-10-22T20:22:39-07:00">2013-10-22T20:22:39-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.88
+         4.97
        </span>
     </span> hits/line)
   </h2>
@@ -67,7 +67,7 @@
         <td>9</td>
         <td>7</td>
         <td>2</td>
-        <td>1.6</td>
+        <td>2.2</td>
       </tr>
       
       <tr>
@@ -87,7 +87,7 @@
         <td>46</td>
         <td>42</td>
         <td>4</td>
-        <td>5.4</td>
+        <td>5.7</td>
       </tr>
       
       <tr>
@@ -107,7 +107,7 @@
         <td>7</td>
         <td>5</td>
         <td>2</td>
-        <td>9.4</td>
+        <td>10.0</td>
       </tr>
       
       <tr>
@@ -223,7 +223,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.0
+         2.18
        </span>
     </span> hits/line)
   </h2>
@@ -265,7 +265,7 @@
         <td>9</td>
         <td>7</td>
         <td>2</td>
-        <td>1.6</td>
+        <td>2.2</td>
       </tr>
       
       <tr>
@@ -285,7 +285,7 @@
         <td>46</td>
         <td>42</td>
         <td>4</td>
-        <td>5.4</td>
+        <td>5.7</td>
       </tr>
       
       <tr>
@@ -424,7 +424,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.68
+         2.8
        </span>
     </span> hits/line)
   </h2>
@@ -456,7 +456,7 @@
         <td>7</td>
         <td>5</td>
         <td>2</td>
-        <td>9.4</td>
+        <td>10.0</td>
       </tr>
       
       <tr>
@@ -803,32 +803,32 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="4">
+          <span class="hits">3</span>
           
           <code class="ruby">    @comment = Comment.new(params[:comment])</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
           
           <code class="ruby">    @post = @comment.post</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="6">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
           
           <code class="ruby">      respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
           <code class="ruby">        if @comment.save</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="8">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="8">
+          <span class="hits">6</span>
           
           <code class="ruby">          format.html { redirect_to @post, notice: &#39;Comment has been submitted and is awaiting approval.&#39; }</code>
         </li>
@@ -1049,14 +1049,14 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="18">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="14" data-linenumber="18">
+          <span class="hits">14</span>
           
           <code class="ruby">    @post = Post.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="19">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="14" data-linenumber="19">
+          <span class="hits">14</span>
           
           <code class="ruby">    @comment = Comment.new</code>
         </li>
@@ -1067,20 +1067,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="21">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="14" data-linenumber="21">
+          <span class="hits">14</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="22">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="14" data-linenumber="22">
+          <span class="hits">14</span>
           
           <code class="ruby">      format.html # show.html.erb</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="23">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="14" data-linenumber="23">
+          <span class="hits">14</span>
           
           <code class="ruby">      format.json { render json: @post }</code>
         </li>
@@ -1757,14 +1757,14 @@
           <code class="ruby">  def flash_class(level)</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="4">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="34" data-linenumber="4">
+          <span class="hits">34</span>
           
           <code class="ruby">    case level</code>
         </li>
       
-        <li class="covered" data-hits="30" data-linenumber="5">
-          <span class="hits">30</span>
+        <li class="covered" data-hits="32" data-linenumber="5">
+          <span class="hits">32</span>
           
           <code class="ruby">    when :notice then &quot;alert alert-info&quot;</code>
         </li>

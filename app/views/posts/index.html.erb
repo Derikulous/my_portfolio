@@ -14,7 +14,7 @@
   <tr id="<%= dom_id(post) %>">
     <td><%= post.title %></td>
     <td><%= post.content %></td>
-    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'View post and add comment', post %></td>
     <% if policy(post).update? %>
       <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <% end %>

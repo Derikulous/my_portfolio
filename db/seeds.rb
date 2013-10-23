@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+@editor = User.create(email: "edizord@example.com", password: "password123", password_confirmation: "password123", role: "editor" )
+@post = Post.create(title: 'Hello Rails',
+                       content: 'Please publish me',
+                         published: false)

@@ -23,6 +23,9 @@ feature "As a visitor, I want to comment on blog posts" do
     # When I click to add comment
     click_on "Submit comment"
 
+    # Then I fill in the form
+    page.text.must_include 'Add comment'
+
     # A text field will be generated
     fill_in "Add comment", with: "short and stout"
     click_on "Submit comment"
