@@ -23,7 +23,7 @@ class PostPolicy < ApplicationPolicy
     post.authored_by?(user) || user.editor? if user.present?
   end
 
-  class Scope = Struct.new(:user, :scope) do
+  Scope = Struct.new(:user, :scope) do
     def resolve
       if user.present? && user.editor?
         scope.all
@@ -35,4 +35,3 @@ class PostPolicy < ApplicationPolicy
     end
   end
 end
-

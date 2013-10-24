@@ -14,15 +14,15 @@ class CommentPolicy < ApplicationPolicy
     user.editor? if user.present?
   end
 
- alias_method :destroy?, :create?
- alias_method :approved?, :create?
- alias_method :update?, :create?
+  alias_method :destroy?, :create?
+  alias_method :approved?, :create?
+  alias_method :update?, :create?
 
- def destroy?
+  def destroy?
    comment.authored_by?(user) || user.editor? if user.present?
  end
 
-   class Scope = Struct.new(:user, :scope) do
+  Scope = Struct.new(:user, :scope) do
     def resolve
       if user.present? && user.editor? && user.author?
         scope.all
