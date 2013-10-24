@@ -174,7 +174,6 @@
         null,
         1,
         null,
-        null,
         null
       ],
       "/Users/stratta1/Portfolio/app/controllers/omniauth_callbacks_controller.rb": [
@@ -294,7 +293,7 @@
         1,
         null,
         1,
-        4,
+        5,
         null,
         null,
         1,
@@ -302,10 +301,10 @@
         null,
         null,
         1,
-        4,
-        4,
-        4,
-        4,
+        3,
+        3,
+        3,
+        3,
         null,
         null,
         1,
@@ -493,6 +492,6 @@
         null
       ]
     },
-    "timestamp": 1382633844
+    "timestamp": 1382636509
   }
 }

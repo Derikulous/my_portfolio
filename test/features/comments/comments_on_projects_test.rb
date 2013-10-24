@@ -4,7 +4,7 @@ feature "A person owning the various projects should comment on them" do
   scenario "Add comments on the project page" do
 
     # Given a project page
-    visit project_path(projects(:two))
+    visit project_path(projects(:one))
 
     # When I add a comment on the project
 

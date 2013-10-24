@@ -12,11 +12,18 @@
   <li>
     <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
   </li>
-  <% else %>
-  <li><%= link_to "Sign Up", new_user_registration_path %> </li>
-  <li><%= link_to "Sign In", new_user_session_path %> </li>
-  <li><%= link_to "Sign In with Twitter", user_omniauth_authorize_path(:twitter) %></li>
+    <% else %>
+  <li>
+    <%= link_to "Sign Up", new_user_registration_path %>
+  </li>
+  <li>
+    <%= link_to "Sign In", new_user_session_path %>
+  </li>
+  <li>
+    <%= link_to "Sign In with Twitter", user_omniauth_authorize_path(:twitter) %>
+  </li>
   <% end %>
+
   <% flash.each do |key, value| %>
   <div class="<%= flash_class(key) %>">
     <%= value %>

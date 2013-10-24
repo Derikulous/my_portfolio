@@ -1,7 +1,7 @@
 <% @projects.each do |project| %>
   <div class="project" id="<%= dom_id(project) %>">
-   Project name: <h3><%= project.name %></h3>
-   Technologies used: <p><%= project.technologies_used %></p>
+    Project name: <h3><%= project.name %></h3>
+    Technologies used: <p><%= project.technologies_used %></p>
     <div class="nav">
       <%= link_to 'Add Comment', project %> |
       <%= link_to 'Edit', edit_project_path(project) %> |
