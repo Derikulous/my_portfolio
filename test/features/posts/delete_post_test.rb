@@ -45,10 +45,12 @@ feature "Deleting a Post" do
   scenario "an editor can delete all posts" do
     #Given a signed in editor
     post_id = set_up_a_post_by_author
-    click_link "Sign Out"
-    sign_in(:one)
+    page.must_have_content "Post was successfully created"
+    click_link 'Back to the blog'
+    click_on 'Sign Out'
 
     #When I visit the posts path
+    sign_in(:editor)
     visit posts_path
     click_link("Destroy", href: "/posts/#{post_id}")
 

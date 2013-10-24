@@ -6,6 +6,7 @@ feature "Check create project is functioning properly" do
     visit new_project_path
 
     # fill in new project info
+    sign_in(:one)
     fill_in 'Name', with: "Saponification"
     fill_in 'Technologies used', with: "Bubbles"
 
@@ -23,6 +24,7 @@ feature "Check create project is functioning properly" do
     visit new_project_path
 
     # fill in invalid data
+    sign_in(:one)
     fill_in "Name", with: "Q"
 
     # click on create project

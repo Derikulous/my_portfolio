@@ -15,7 +15,7 @@ feature "As an author or editor, I want to approve comments" do
     # Given a new comment
     comment_by_user
     visit post_path(posts(:oz))
-    page.text.wont_include "kitchen"
+    page.must_have_content "kitchen"
   end
 
   scenario "Editor can approve comments" do

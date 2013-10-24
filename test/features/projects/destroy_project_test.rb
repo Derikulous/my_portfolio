@@ -4,6 +4,8 @@ feature "As a site owner, I want to delete a portfolio item so that I can keep t
   scenario "Deleting an existing project" do
 
     # Given that I have a project
+    visit project_path(projects(:two))
+    sign_in(:one)
     visit projects_path
 
     # When I click the delete button

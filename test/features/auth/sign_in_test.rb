@@ -2,7 +2,6 @@ require 'test_helper'
 
 feature "Authorize Signup" do
   scenario "Sign in works" do
-
     # Given an existing user
     visit root_path
     click_on "Sign In"

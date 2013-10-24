@@ -4,8 +4,8 @@ feature "As the site owner, I want to edit a project so that I can correct typoe
   scenario "editing an existing project" do
     # Given an existing project
     visit edit_project_path(projects(:one))
-
     # When I make changes
+    sign_in(:one)
     fill_in "Name", with: "My Rad Portfolio"
     fill_in "Technologies used", with: "CSS"
     click_on "Update Project"
@@ -21,6 +21,7 @@ feature "As the site owner, I want to edit a project so that I can correct typoe
     visit edit_project_path(projects(:one))
 
     # When I submit invalid changes
+    sign_in(:one)
     fill_in "Name", with: "Q"
     click_on "Update Project"
 
