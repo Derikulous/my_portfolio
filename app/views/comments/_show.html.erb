@@ -1,0 +1,13 @@
+<h1>Comments</h1>
+
+<% @comments.each do |comment| %>
+<p>
+  Author:<%= comment.author %>
+  Content:<%= comment.content %>
+</p>
+
+
+<% if comment.approved? == false && policy(comment).approved? %>
+  <%= button_to 'Approve', post_comment_path(@post, comment, comment: {approved: true }), method: :put, class: "btn btn-success" %>
+<% end %>
+<% end %>

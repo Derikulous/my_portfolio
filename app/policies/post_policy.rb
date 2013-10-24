@@ -23,7 +23,6 @@
       post.authored_by?(user) || user.editor? if user.present?
     end
 
-
     PostPolicy = Struct.new(:user, :post) do
       Scope = Struct.new(:user, :scope) do
         def resolve

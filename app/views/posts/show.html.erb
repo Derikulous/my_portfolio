@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
-<h1>  <%= @post.title %></h1>
-
+<p>
+  <h1><%= @post.title %></h1>
+</p>
 <p>
   <b>Content:</b>
   <%= @post.content %>
@@ -10,8 +10,12 @@
   <b>By:</b>
   <%= @post.author.email %>
 </p>
+
 <% if policy(@post).update? %>
-  <%= link_to 'Edit Post', edit_post_path(@post) %> |
+<%= link_to 'Edit Post', edit_post_path(@post) %> |
 <% end %>
+
 <%= render 'comments/form' %>
+
+<%= render 'comments/show' %>
 <%= link_to 'Back to the blog', posts_path %>
