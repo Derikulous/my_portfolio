@@ -12,7 +12,7 @@
   <% end %>
 </p>
 <% if comment.approved? && policy(comment).approved? %>
-<%= link_to 'Reject',polymorphic_path([@commentable, comment], comment: { approved: false }), class: "btn btn-warning", method: :put, data: { confirm: 'Are you sure you want to reject?' }%>
+<%= link_to 'Reject', polymorphic_path([@commentable, comment], comment: { approved: false }), class: "btn btn-warning", method: :put, data: { confirm: 'Are you sure you want to reject?' }%>
 <% end %>
 </p>
 <p>
