@@ -20,17 +20,14 @@ feature "As an author or editor, I want to approve comments" do
 
   scenario "Editor can approve comments" do
     # Given an editor who can authorize posts
-    sign_in(:one)
+    sign_in(:editor)
 
     # A set of comments will be pending approval
-    pending 'OAuth implementation'
-    visit post_comments_path
-
+    visit post_path(posts(:cz))
+    comment_by_user
     # The editor can approve comments
     comment_id = current_url.split('/').last
-    click_link("Edit", href: "/comments#{comment_id}/edit")
-    page.check 'Approved'
-    click_on "Update comment"
+    click_on 'Approve'
 
     # When I click on add comment
     visit post_path(posts(:oz))
