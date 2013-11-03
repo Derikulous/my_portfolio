@@ -20,7 +20,7 @@ class CommentPolicy < ApplicationPolicy
 
   def destroy?
    comment.authored_by?(user) || user.editor? if user.present?
- end
+  end
 
   Scope = Struct.new(:user, :scope) do
     def resolve

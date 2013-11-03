@@ -8,16 +8,16 @@
 
 <p>
   <% if comment.approved? == false && policy(comment).approved? %>
-    <%= button_to 'Approve', polymorphic_path([@commentable, comment], comment: {approved: true }), class: "btn btn-success", method: :put, data: { confirm: 'The comment has been approved' } %>
+  <%= button_to 'Approve', polymorphic_path([@commentable, comment], comment: {approved: true }), class: "btn btn-success", method: :put, data: { confirm: 'The comment has been approved' } %>
   <% end %>
 </p>
   <% if comment.approved? && policy(comment).approved? %>
-    <%= link_to 'Reject', polymorphic_path([@commentable, comment], comment: { approved: false }), class: "btn btn-warning", method: :put, data: { confirm: 'Are you sure you want to reject?' }%>
+  <%= link_to 'Reject', polymorphic_path([@commentable, comment], comment: { approved: false }), class: "btn btn-warning", method: :put, data: { confirm: 'Are you sure you want to reject?' }%>
   <% end %>
 </p>
 <p>
   <% if policy(comment).destroy? %>
-    <%= link_to 'Destroy', [@commentable, comment], class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Destroy', [@commentable, comment], class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 </p>
 <% end %>

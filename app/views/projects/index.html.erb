@@ -11,4 +11,7 @@
 <% end %>
 
 <br />
-<%= link_to 'New Project', new_project_path %>
+
+<% if current_user.present? %>
+  <%= link_to 'New Project', new_project_path %>
+<% end %>
