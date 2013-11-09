@@ -1,12 +1,12 @@
 require 'test_helper'
 
 def comment_by_user
-    visit post_path(posts(:oz))
-    fill_in :comment_author,        with: "That boy weezee"
-    fill_in :comment_author_url,    with: "http://trollme.com"
-    fill_in :comment_author_email,  with: "MrT@IPityTheFool.com"
-    fill_in :comment_content,       with: "That's weird. Did you create this post in the kitchen?"
-    click_on "Submit comment for approval"
+  visit post_path(posts(:oz))
+  fill_in :comment_author,        with: "That boy weezee"
+  fill_in :comment_author_url,    with: "http://trollme.com"
+  fill_in :comment_author_email,  with: "MrT@IPityTheFool.com"
+  fill_in :comment_content,       with: "That's weird. Did you create this post in the kitchen?"
+  click_on "Submit comment for approval"
 end
 
 feature "As an author or editor, I want to approve comments" do

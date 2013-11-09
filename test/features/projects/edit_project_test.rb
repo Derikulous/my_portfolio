@@ -1,6 +1,6 @@
 require "test_helper"
 
-feature "As the site owner, I want to edit a project so that I can correct typoes" do
+feature "As the site owner, I want to edit a project so that I can correct typos" do
   scenario "editing an existing project" do
     # Given an existing project
     visit edit_project_path(projects(:one))

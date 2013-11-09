@@ -21,6 +21,8 @@ feature "A person owning the various projects should comment on them" do
     # When I submit a comment without attributes
     click_on "Submit comment for approval"
     # Then I should get an error
-    pending "Why is an error not popping up?"
+    page.text.must_include "Author can't be blank"
+    page.text.must_include "Author url can't be blank"
+    page.text.must_include "Author email can't be blank"
   end
 end
