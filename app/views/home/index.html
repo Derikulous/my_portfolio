@@ -16,39 +16,71 @@
   <link href="assets/stylesheets/main.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
   <script src="assets/javascripts/jquery.min.js"></script>
   <script type="text/javascript" src="assets/javascripts/smoothscroll.js"></script>
   <script src="assets/javascripts/Chart.js"></script>
 </head>
 
-<body>
-  <div class="navbar navbar-fixed-top" data-activeslide="1">
-    <div class="container">
+  <body data-spy="scroll" data-offset="0" data-target="#nav">
 
-      <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
-
-      <div class="nav-collapse collapse navbar-responsive-collapse">
-        <ul class="nav row">
-          <li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
-          <li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-user"></span> <span class="text">ABOUT US</span></a></li>
-          <li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">PORTFOLIO</span></a></li>
-          <li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-gears"></span> <span class="text">PROCESS</span></a></li>
-          <li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon icon-heart"></span> <span class="text">CLIENTS</span></a></li>
-          <li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">CONTACT</span></a></li>
-        </ul>
+  <div id="section-topbar">
+    <div id="topbar-inner">
+      <div class="container">
         <div class="row">
-          <div class="col-sm-2 active-menu"></div>
+          <div class="dropdown">
+            <ul id="nav" class="nav">
+              <li class="menu-item"><a class="smoothScroll" href="#about" title="About"><i class="fa fa-home"></i>   ABOUT</a></li>
+              <li class="menu-item"><a class="smoothScroll" href="#portfolio" title="Portfolio"><i class="fa fa-briefcase"></i>   PORTFOLIO</a></li>
+              <li class="menu-item"><a class="smoothScroll" href="#resume" title="Resume"><i class="fa fa-envelope"></i>   RESUME</a></li>
+              <li class="menu-item"><a class="smoothScroll" href="#blog" title="Blog"><i class="fa fa-pencil"></i>    BLOG</a></li>
+              <li class="menu-item"><a class="smoothScroll" href="#contact" title="Contact"><i class="fa fa-phone"></i>   CONTACT</a></li>
+            </ul><!--/ uL#nav -->
+          </div><!-- /.dropdown -->
+
+          <div class="clear"></div>
+        </div><!--/.row -->
+      </div><!--/.container -->
+
+      <div class="clear"></div>
+    </div><!--/ #topbar-inner -->
+  </div><!--/ #section-topbar -->
+
+  <div id="headerwrap">
+    <div class="container">
+      <div class="row centered">
+        <div class="col-lg-12">
+          <h1>Derik Strattan</h1>
+          <h3>Ruby on Rails Developer</h3>
+          <div class= "row centered">
+            <ul>
+              <li class="menu-item"><a href="https://github.com/Derikulous" title="GitHub"><i class="fa fa-github-square fa-5x"></i></a></li>
+            </ul>
+          </div>
+        </div><!--/.col-lg-12 -->
+      </div><!--/.row -->
+    </div><!--/.container -->
+  </div><!--/.#headerwrap -->
+
+    <section id="about" name="about"></section>
+  <div id="intro">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-2 col-lg-offset-1">
+          <h5>ABOUT</h5>
         </div>
-      </div><!-- /.nav-collapse -->
-    </div><!-- /.container -->
-  </div><!-- /.navbar -->
+        <div class="col-lg-6">
+          <p>I'm web designer & front-end developer with 7 years of professional experience. I'm interested in all kinds of visual communication, but my major focus is on designing web, mobile & tablet interfaces. I also have skills in other fields like branding, icon design or web development.</p>
+        </div>
+        <div class="col-lg-3">
+          <p><a href="#"><i class="icon-file"></i></a> <sm>DOWNLOAD PDF</sm></p>
+        </div>
+
+      </div><!--/.row -->
+    </div><!--/.container -->
+  </div><!--/ #intro -->
 
 </body>
 
