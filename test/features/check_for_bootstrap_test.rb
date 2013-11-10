@@ -7,6 +7,6 @@ feature "Check for Twitter Bootstrap" do
     # When I visit the page
     visit root_path
     # Then I should see the jumbotron div class
-    page.body.must_include "btn-primary"
+    page.body.must_include "navbar-responsive-collapse"
   end
 end
