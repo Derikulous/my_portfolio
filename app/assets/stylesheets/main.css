@@ -88,11 +88,11 @@ a:after {
 }
 
 #section-topbar a {
-  color: #fff;
+  color: rgb(95, 95, 95);
 }
 
 #topbar-inner {
-	background: #111;
+	background-color: rgba(228, 230, 229, 0.85);;
 	line-height: 0;
 	text-align: center;
 }
@@ -108,7 +108,6 @@ a:after {
 	margin: 0;
 	padding: 0;
 
-	border-right: 1px solid #222;
 
 	/* For IE, the outcast */
 	zoom:1;
@@ -126,19 +125,19 @@ a:after {
   display: block;
   font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
-  padding: 18px 20px 18px 20px;
-  border-left: 1px solid #222;
+  padding: 15px 20px 18px 20px;
+
 }
 
 	#section-topbar ul#nav a:hover {
 	  background: #222;
 	  text-decoration: none;
-	  border-left: 1px solid #111;
+
 	}
 
 	#section-topbar ul#nav .active a {
 		background: #44bbaa;
-		border-left: 1px solid #111;
+
 	}
 
 		#section-topbar ul#nav .active a:hover {
@@ -153,7 +152,7 @@ a:after {
 
 /* Header Wrap */
 #headerwrap {
-	background: url(Sanddune.jpg) no-repeat center top;
+	background: url(singlelightsource.jpg) no-repeat center top;
 	margin-top: 60px;
 	padding-top:140px;
 	text-align:center;
@@ -195,6 +194,18 @@ a:after {
 #intro h5, p {
 	color: white;
 }
+#intro h4, p {
+  color: white;
+}
+#intro h3, p {
+  color: white;
+}
+#intro h2, p {
+  color: white;
+}
+#intro h1, p {
+  color: white;
+}
 
 #intro i {
 	color: white;
@@ -203,6 +214,9 @@ a:after {
 	vertical-align: middle;
 }
 
+.col-lg-6 a {
+  color: rgb(248, 92, 55);;
+}
 
 #skillswrap {
 	background: #2c3e50;
