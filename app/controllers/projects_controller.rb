@@ -25,7 +25,10 @@ class ProjectsController < ApplicationController
 
     if @project.save
       flash[:notice] = "Project has been created"
-      redirect_to @project
+      respond_to do |format|
+        format.html { redirect_to @project }
+        format.js
+      end
     else
       flash[:alert] = "Project could not be saved"
       render :new
@@ -36,7 +39,10 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
 
     if @project.update_attributes(params[:project])
-      redirect_to @project, notice: 'Project was successfully updated'
+      respond_to do |format|
+        format.html { redirect_to @project, notice: 'Project was successfully updated' }
+        format.js
+      end
     else
       render :edit
     end
@@ -45,6 +51,9 @@ class ProjectsController < ApplicationController
   def destroy
     @project = Project.find(params[:id])
     @project.destroy
-    redirect_to @project, notice: 'Project was successfully deleted'
+    respond_to do |format|
+      format.html { redirect_to @project, notice: 'Project was successfully deleted' }
+      format.js
+    end
   end
 end
