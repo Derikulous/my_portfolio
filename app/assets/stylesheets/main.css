@@ -296,3 +296,7 @@ a:after {
 sm {
 	font-size: 12px;
 }
+.portfolio-example img {
+  width: 800px;
+  height: 400px;
+}
