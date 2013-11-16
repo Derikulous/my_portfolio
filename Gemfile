@@ -12,6 +12,7 @@ gem 'omniauth-twitter'
 gem 'figaro'
 gem 'font-awesome-sass'
 gem 'skrollr-rails'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
   gem 'minitest'
@@ -37,5 +38,4 @@ group :assets do
   gem 'sass-rails', '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'rack-cors', :require => 'rack/cors'
 end

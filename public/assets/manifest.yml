@@ -7,8 +7,6 @@ glyphicons-halflings-regular.ttf: glyphicons-halflings-regular-b7248b70474d970f5
 glyphicons-halflings-regular/index.ttf: glyphicons-halflings-regular-b7248b70474d970f596df264c4f9b5ab.ttf
 glyphicons-halflings-regular.woff: glyphicons-halflings-regular-c866ecc8bb1c848e2a8557b67499891d.woff
 glyphicons-halflings-regular/index.woff: glyphicons-halflings-regular-c866ecc8bb1c848e2a8557b67499891d.woff
-Colors.jpg: Colors-dfe80aaa7b2c16b1d67f3f26458e6cff.jpg
-Colors/index.jpg: Colors-dfe80aaa7b2c16b1d67f3f26458e6cff.jpg
 Derik_portfolio.png: Derik_portfolio-2e20a950c35ebf329a824c54ff9a7ded.png
 Derik_portfolio/index.png: Derik_portfolio-2e20a950c35ebf329a824c54ff9a7ded.png
 Offerletter.png: Offerletter-30e868610d7b03929e0a4add2d95dff9.png
@@ -47,8 +45,8 @@ yellowstone.jpg: yellowstone-c6b1fcc4f5e4f4baef930fa4fdd7d321.jpg
 yellowstone/index.jpg: yellowstone-c6b1fcc4f5e4f4baef930fa4fdd7d321.jpg
 application.js: application-cbd85f896a527a9ccc9811ff53db0e8f.js
 application/index.js: application-cbd85f896a527a9ccc9811ff53db0e8f.js
-application.css: application-ac70ecac73591596c6280e0b3a13deca.css
-application/index.css: application-ac70ecac73591596c6280e0b3a13deca.css
+application.css: application-47a0a6aebd9bce0a9ef46c3ffeb64345.css
+application/index.css: application-47a0a6aebd9bce0a9ef46c3ffeb64345.css
 fontawesome-webfont.eot: fontawesome-webfont-e742c0f297e307a74bdf4ca3c19073a2.eot
 fontawesome-webfont/index.eot: fontawesome-webfont-e742c0f297e307a74bdf4ca3c19073a2.eot
 fontawesome-webfont.svg: fontawesome-webfont-9169b7b7c593388d41dd3c339df5b86b.svg
