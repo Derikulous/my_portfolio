@@ -43,7 +43,7 @@ Portfolio::Application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  # config.action_controller.asset_host = "http://assets.example.com"
+   config.action_controller.asset_host = "d23waqb8pub2cl.cloudfront.net"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
@@ -60,7 +60,7 @@ Portfolio::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-  config.action_mailer.default_url_options = { :host => 'http://derikstrattan.herokuapp.com/' }
+  config.action_mailer.default_url_options = { :host => 'http://derikstrattan.com/' }
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
