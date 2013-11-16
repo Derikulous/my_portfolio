@@ -26,6 +26,14 @@ module Portfolio
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.rakismet.url = 'http://www.derikstrattan.com/'
+    config.middleware.insert_before Warden::Manager, Rack::Cors do
+      allow do
+        origins %r{^https?:\/\/[a-z0-9\-]+.derikstrattan.com}:?\d*$}i
+        resource '*',
+        headers: :any,
+        methods: [:get, :put, :create, :delete]
+      end
+    end
 
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
@@ -74,5 +82,5 @@ module Portfolio
     config.assets.compile = true
     config.assets.paths << Rails.root.join("app", "assets")
     config.assets.precompile += %w( .svg .eot .woff .ttf )
-end
+  end
 end
