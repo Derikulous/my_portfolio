@@ -26,7 +26,7 @@ module Portfolio
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.rakismet.url = 'http://www.derikstrattan.com/'
-    config.middleware.insert_before Warden::Manager, Rack::Cors do
+    config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
       allow do
         origins '*'
         resource '*',
