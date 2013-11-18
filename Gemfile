@@ -13,6 +13,7 @@ gem 'figaro'
 gem 'font-awesome-sass'
 gem 'skrollr-rails'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'minitest'
