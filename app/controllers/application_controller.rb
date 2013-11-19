@@ -5,7 +5,17 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :page_not_found
   rescue_from ActionController::RoutingError, with: :page_not_found
 
+  before_filter :set_locale
+
   private
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  def default_url_options(options = {})
+    { locale: I18n.locale }
+  end
 
   def page_not_found
     flash[:error] = "Sorry, we couldn't find that page. Here's the home page"

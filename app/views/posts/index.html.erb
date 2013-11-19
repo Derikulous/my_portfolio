@@ -4,6 +4,7 @@
   <tr>
     <th>Title</th>
     <th>Content</th>
+    <th>Timestamp</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,6 +15,8 @@
   <tr id="<%= dom_id(post) %>">
     <td><%= post.title %></td>
     <td><%= post.content %></td>
+    <td class="timestamp">
+      <%= l post.created_at %>
     <td><%= link_to 'View post and add comment', post, class: "btn btn-primary" %></td>
     <% if policy(post).update? %>
     <td>
