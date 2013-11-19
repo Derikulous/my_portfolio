@@ -13,10 +13,14 @@ require "minitest/colorize"
 
 include Capybara::DSL
 include Devise::TestHelpers
+DatabaseCleaner.strategy = :truncation
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
   fixtures :all
+  self.use_transactional_fixtures = false
+  puts "Database Cleaning"
+  DatabaseCleaner.start
 
   # Add more helper methods to be used by all tests here...
   # signs in a user

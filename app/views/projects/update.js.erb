@@ -1,1 +1,2 @@
-$('#edit_project_<%= @project.id %>').appendTo('#edit_project')
+$('#edit_project_<%= @project.id %>').fadeOut().replaceWith('<%= j render(@project) %>').fadeIn()
+$('#new_link').fadeIn()

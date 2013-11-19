@@ -27,6 +27,7 @@ group :development, :test do
   gem 'launchy'
   gem 'pry-rails'
   gem 'pry-debugger'
+  gem 'database_cleaner'
 end
 
 group :production do
