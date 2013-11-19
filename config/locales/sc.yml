@@ -3,6 +3,9 @@
 
 sc:
   hello: "Hello world BORK BORK"
+  post:
+    title: "Name of the Article"
+    body: "eff sum BORK"
   time:
     pm: "BORK" AFTERNOOBORK
     formats:

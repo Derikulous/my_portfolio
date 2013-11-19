@@ -3,6 +3,9 @@
 
 en:
   hello: "Hello world"
+  post:
+    title: "Name of the Article"
+    body: "eff sum"
   time:
     formats:
       default: "%B %e %l:%M %p"
