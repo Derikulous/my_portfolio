@@ -5,6 +5,12 @@ GIT
     bootstrap-sass (3.0.0.0)
       sass (~> 3.2)
 
+GIT
+  remote: http://github.com/rmagick/rmagick.git
+  revision: 79e1708c7f6792a3a90cb8cb3ffaeb74c58e092e
+  specs:
+    rmagick (2.13.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -247,6 +253,7 @@ DEPENDENCIES
   rails (= 3.2.14)
   rails_12factor
   rakismet
+  rmagick (= 2.13.2)!
   sass-rails (~> 3.2.3)
   simplecov
   skrollr-rails
