@@ -16,6 +16,7 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'newrelic_rpm'
 gem 'carrierwave'
 gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
+gem 'fog'
 
 group :development, :test do
   gem 'minitest'
