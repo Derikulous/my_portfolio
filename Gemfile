@@ -14,6 +14,9 @@ gem 'font-awesome-sass'
 gem 'skrollr-rails'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'newrelic_rpm'
+gem 'rmagick'
+gem 'carrierwave'
+gem 'fog'
 
 group :development, :test do
   gem 'minitest'
