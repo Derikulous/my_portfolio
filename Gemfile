@@ -11,6 +11,8 @@ gem 'rakismet'
 gem 'omniauth-twitter'
 gem 'figaro'
 gem 'font-awesome-sass'
+gem 'jasmine'
+gem 'jasmine-jquery-rails'
 
 group :development, :test do
   gem 'minitest'
