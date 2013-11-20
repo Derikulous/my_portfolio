@@ -17,6 +17,8 @@ gem 'newrelic_rpm'
 gem 'rmagick'
 gem 'carrierwave'
 gem 'fog'
+gem 'carrierwave_direct'
+gem 'sidekiq'
 
 group :development, :test do
   gem 'minitest'
