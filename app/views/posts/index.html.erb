@@ -2,8 +2,8 @@
 
 <table>
   <tr>
-    <th><% I18n.translate "post.title" %></th>
-    <th><%= t "post.content" %></th>
+    <th>Title</th>
+    <th>Content</th>
     <th>Created At</th>
     <th></th>
     <th></th>
@@ -15,8 +15,6 @@
   <tr id="<%= dom_id(post) %>">
     <td><%= post.title %></td>
     <td><%= post.content %></td>
-    <td class="timestamp">
-      <%= l post.created_at %>
     <td><%= link_to 'View post and add comment', post, class: "btn btn-primary" %></td>
     <% if policy(post).update? %>
     <td>

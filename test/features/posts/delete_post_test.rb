@@ -19,6 +19,7 @@ feature "Deleting a Post" do
     # Given an existing post
     sign_in(:one)
     visit posts_path
+    save_and_open_page
 
     # When I click the delete button
     click_link("Destroy", href: "/posts/#{posts(:cr).id}")

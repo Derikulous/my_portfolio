@@ -1,5 +1,4 @@
 Portfolio::Application.routes.draw do
-  scope ":locale" do
     devise_for :users, controllers: {registrations: "users/registrations",
                                      passwords: "users/passwords",
                                      omniauth_callbacks: "omniauth_callbacks"}
@@ -13,7 +12,6 @@ Portfolio::Application.routes.draw do
     end
 
     resources :comments
-  end
 
   root to: 'home#index'
 
