@@ -32,6 +32,6 @@
 
 <br />
 
-<% if current_user.present? %>
+<% if current_user.try(:admin?) %>
   <%= link_to 'New Post', new_post_path, class: "btn btn-default"%>
 <% end %>

@@ -9,9 +9,13 @@
     </div>
   </div>
 <% end %>
+$(document).on('page:load', function(){
+  window['rangy'].initialized = false
+})
+
 
 <br />
 
-<% if current_user.present? %>
+<% if current_user.try(:admin?) %>
   <%= link_to 'New Project', new_project_path %>
 <% end %>

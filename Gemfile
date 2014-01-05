@@ -17,6 +17,7 @@ gem 'newrelic_rpm'
 gem 'rmagick'
 gem 'carrierwave'
 gem 'fog'
+gem 'bootstrap-wysihtml5-rails'
 
 group :development, :test do
   gem 'minitest'
