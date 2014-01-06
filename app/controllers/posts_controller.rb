@@ -16,17 +16,14 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @commentable = @post
-    @comments = @commentable.comments
-    @comment = Comment.new
   end
 
   def new
     @post = Post.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @post }
+    unless current_user.try(:admin?)
+      flash[:alert] = "You are not authorized to view this page."
+      redirect_to root_path
     end
   end
 
@@ -36,7 +33,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post])
-    @post.author = current_user
+    @post.author = current_user.try(:admin?)
     authorize @post
 
     respond_to do |format|
@@ -52,6 +49,7 @@ class PostsController < ApplicationController
   end
 
   def update
+    authorize @post
     @post = Post.find(params[:id])
 
     respond_to do |format|
@@ -69,6 +67,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
+    authorize @post
 
     respond_to do |format|
       format.html { redirect_to posts_url }

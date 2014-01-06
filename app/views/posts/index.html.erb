@@ -1,13 +1,11 @@
+<% if current_user.try(:admin?) %>
 <h1>All posts</h1>
 
 <table>
   <tr>
     <th>Title</th>
     <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th>Comment</th>
+
   </tr>
 
   <% @posts.each do |post| %>
@@ -31,7 +29,5 @@
 </table>
 
 <br />
-
-<% if current_user.try(:admin?) %>
   <%= link_to 'New Post', new_post_path, class: "btn btn-default"%>
 <% end %>
