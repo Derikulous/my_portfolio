@@ -7,27 +7,21 @@ class PostPolicy < ApplicationPolicy
   end
 
   def create?
-    user.author? || user.editor? if user.present?
+    user.admin? if user.present?
   end
+
+  alias_method :destroy?, :create?
+  alias_method :update?, :create?
 
   def publish?
-    user.editor? if user.present?
-  end
-
-  def update?
-    post.authored_by?(user) || user.editor? if user.present?
-  end
-  alias_method :destroy?, :update?
-
-  def destroy?
-    post.authored_by?(user) || user.editor? if user.present?
+    user.admin? if user.present?
   end
 
   Scope = Struct.new(:user, :scope) do
     def resolve
-      if user.present? && user.editor?
+      if user.present? && user.admin?
         scope.all
-      elsif user.present? && user.author?
+      elsif user.present?
         scope.where(:author_id => user.id) | scope.published
       else
         scope.where(:published => true)

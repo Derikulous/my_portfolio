@@ -1,33 +1,44 @@
-<% if current_user.try(:admin?) %>
 <h1>All posts</h1>
 
 <table>
   <tr>
     <th>Title</th>
     <th>Content</th>
-
+    <th>Comments</th>
   </tr>
 
   <% @posts.each do |post| %>
-  <tr id="<%= dom_id(post) %>">
-    <td><%= post.title %></td>
-    <td><%= post.content %></td>
-    <td><%= link_to 'View post and add comment', post, class: "btn btn-primary" %></td>
-    <% if policy(post).update? %>
-    <td>
-      <%= link_to 'Edit Post', edit_post_path(post), class: "btn btn-default" %>
-      <p><%= "Published" if post.published %></p>
+  <td><%= link_to post.title, post_path(post) %></td>
+  <td><%= l post.created_at, format: :short %></td>
+  <p><%= markdown post.content %></p>
+  <td><%= link_to 'View post and add comment', post, class: "btn btn-primary" %></td>
+
+  <% if current_user.try(:admin?) %>
+    <% if post.published? == false && policy(post).publish? %>
       <%= button_to 'Publish', post_path(post, post: { published: true }),
-      method: :put, class: "btn btn-default" %>
-    </td>
+    method: :put, class: "btn btn-default" %>
     <% end %>
+
+    <% if post.published? && policy(post).publish?%>
+      <%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?'}, :class => 'btn btn-warning' %>
+    <% end %>
+
     <% if policy(post).destroy? %>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
     <% end %>
-  </tr>
+
+    <% if policy(post).update? %>
+      <%= link_to 'Edit Post', edit_post_path(post), class: "btn btn-default" %>
+    <% end %>
+
+  <%= "Published" if post.published %>
   <% end %>
+
+</tr>
+<% end %>
 </table>
 
 <br />
+<% if current_user.try(:admin?) %>
   <%= link_to 'New Post', new_post_path, class: "btn btn-default"%>
 <% end %>

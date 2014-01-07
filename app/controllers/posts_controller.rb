@@ -7,11 +7,6 @@ class PostsController < ApplicationController
     else
       @posts = Post.where(published: true)
     end
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @posts }
-    end
   end
 
   def show
@@ -20,11 +15,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-
-    unless current_user.try(:admin?)
-      flash[:alert] = "You are not authorized to view this page."
-      redirect_to root_path
-    end
   end
 
   def edit
@@ -33,45 +23,26 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post])
-    @post.author = current_user.try(:admin?)
-    authorize @post
-
-    respond_to do |format|
-      if @post.save
-        current_user.posts << @post
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render json: @post, status: :created, location: @post }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
+    if @post.save
+      redirect_to posts_path
     end
   end
+
 
   def update
-    authorize @post
     @post = Post.find(params[:id])
 
-    respond_to do |format|
-      if @post.update_attributes(params[:post])
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
+    if @post.update_attributes(params[:post])
+      redirect_to @post, notice: 'Post was successfully updated'
+    else
+      render :edit
     end
   end
-
 
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    authorize @post
 
-    respond_to do |format|
-      format.html { redirect_to posts_url }
-      format.json { head :no_content }
-    end
+    redirect_to posts_path
   end
 end

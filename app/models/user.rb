@@ -10,12 +10,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role
   # attr_accessible :title, :body
 
-  def author?
-    role == 'author'
-  end
-
-  def editor?
-    role == 'editor'
+  def admin?
+    role == 'admin'
   end
 
   def self.from_omniauth(auth)
