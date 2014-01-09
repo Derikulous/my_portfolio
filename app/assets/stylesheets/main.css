@@ -36,11 +36,11 @@ html, body {
 
 .navbar-brand {
   height: 54px;
-  width: 190px;
+  width: 175px;
   float: left;
-  text-indent: -9px;
+  text-indent: -999px;
   color: rgb(101, 102, 110);
-  text-shadow:2px 2px 4px grey;
+  background: url("images/logo.png") no-repeat scroll transparent;
 }
 .navbar-brand a {
   width: 100%;

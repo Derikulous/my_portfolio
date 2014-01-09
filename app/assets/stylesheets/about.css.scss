@@ -10,7 +10,7 @@
 }
 #s-about {
   background-position: 0px -135px;
-  background: url("images/about.png") no-repeat scroll 0% 0% transparent;
+  background: url("images/about_dark.png") no-repeat scroll 0% 0% transparent;
 }
 .sidebarHead {
   width: 85px;
@@ -57,13 +57,20 @@ a.menu:link {
   margin: 0px auto;
   background-position: center center;
   text-align: center;
-
+}
+.galleryContainer_2 {
+  height: 584px;
+  width: 712px;
+  overflow: hidden;
+  margin: 0px auto;
+  background-position: center center;
+  background: url("images/yellowstone.jpg") no-repeat scroll 0% 0% transparent;
+  text-align: center;
 }
 #blogContent .inner a img {
   border: 1px solid rgb(255, 198, 198);
   margin-top: 0px;
   border: medium none;
-
 }
 a, img, input {
   outline: medium none;
@@ -75,7 +82,7 @@ i {
   color: rgb(100, 100, 100);
 }
 #foot {
-  margin-top: -10px;
+  margin: 0px;
   border: 0px solid red;
   height: 54px;
   background-position: 5px 0px;
@@ -93,14 +100,28 @@ i {
 #portfolioBackDead {
   width: 72px;
   height: 16px;
-  background: url("images_cache/prev-next.gif") no-repeat scroll 0px -32px transparent;
+  background: url("images/previous_light.png") no-repeat scroll -6px -15px transparent;
+  text-indent: -99999px;
+  float: left;
+}
+#portfolioBack {
+  width: 72px;
+  height: 16px;
+  background: url("images/previous.png") no-repeat scroll -6px -15px transparent;
   text-indent: -99999px;
   float: left;
 }
 #portfolioNext {
   width: 50px;
   height: 16px;
-  background: url("images_cache/prev-next.gif") no-repeat scroll -72px 0px transparent;
+  background: url("images/next.png") no-repeat scroll -30px -15px transparent;
+  text-indent: -99999px;
+  float: left;
+}
+#portfolioNextDead {
+  width: 50px;
+  height: 16px;
+  background: url("images/next_light.png") no-repeat scroll -30px -15px transparent;
   text-indent: -99999px;
   float: left;
 }
