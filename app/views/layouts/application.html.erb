@@ -27,20 +27,46 @@
               BLOG
             </a>
           </li>
+          <li id="photos">
+            <a href="/photos/">
+              PHOTOS
+            </a>
+          </li>
+          <li id="projects">
+            <a href="/projects/">
+              PROJECTS
+            </a>
+          </li>
+          <li id="about">
+            <a href= <%= about_path %> >
+              ABOUT
+            </a>
+          </li>
         </ul>
       </div><!-- nav-menu -->
     </div><!-- header -->
 
-      <% flash.each do |key, value| %>
-      <div class="<%= flash_class(key) %>">
-        <%= value %>
-      </div>
-      <% end %>
-
-      <%= yield %>
-
-      <%= render 'layouts/nav' %>
+    <% flash.each do |key, value| %>
+    <div class="<%= flash_class(key) %>">
+      <%= value %>
     </div>
+    <% end %>
+
+    <div class="sign_out pull-right">
+      <% if current_user.present? %>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: :btn %>
+      <% end %>
+    </div>
+
+    <%= yield %>
+
   </div>
+</div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/smoothscroll.js"></script>
+    <script src="assets/javascripts/Chart.js"></script>
 </body>
 </html>

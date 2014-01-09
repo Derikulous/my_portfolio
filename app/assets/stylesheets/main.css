@@ -1,6 +1,6 @@
 html, body {
   height: 100%;
-  min-height: 100%;
+  max-height: 710px;
   margin: 0 0 1px;
   padding: 0;
 }
@@ -77,7 +77,7 @@ a:link {
   width: 106px;
   text-indent: -9999px;
   font-size: 0px;
-  background-position: 0px -4px;
+  background-position: 0px -17px;
   margin-top: 2px;
 }
 #nav-menu li a {
@@ -90,4 +90,12 @@ a:link {
 #blog {
   background: url("images/blog.png") no-repeat scroll 0% 0% transparent;
 }
-
+#photos {
+  background: url("images/photos.png") no-repeat scroll 0% 0% transparent;
+}
+#about {
+  background: url("images/about.png") no-repeat scroll 0% 0% transparent;
+}
+#projects {
+  background: url("images/projects.png") no-repeat scroll 0% 0% transparent;
+}
