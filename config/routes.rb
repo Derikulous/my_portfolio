@@ -3,7 +3,7 @@ Portfolio::Application.routes.draw do
   resources :posts
 
   # Custom routes for static pages
-  get '/about', to: 'home#about'
+  get '/about', to: 'pages#about'
   get '/about/2', to: 'pages#bio'
   get '/projects', to: 'pages#project'
 
