@@ -1,0 +1,33 @@
+.blogtitle {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: left;
+  text-decoration: none;
+  font-family: "Palatino Linotype","ff-tisa-web-pro",Georgia,Cambria,Times,serif;
+  display: inline-block;
+  color: black;
+  line-height: 34px;
+  width: 100%;
+}
+#s-blog {
+  background-position: 0px -135px;
+  background: url("images/blog_dark.png") no-repeat scroll 0% 0% transparent;
+}
+.blogdate {
+  font-family: "Palatino";
+  font-size: 16px;
+  text-align: left;
+  font-weight: normal;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  color: rgb(66, 45, 31);
+}
+.blogpost {
+  color: rgb(0, 0, 0);
+  margin-bottom: 45px;
+  clear: both;
+  font-family: "Palatino Linotype","ff-tisa-web-pro",Georgia,Cambria,Times,serif;
+  font-size: 18px;
+  line-height: 32px;
+  float: left;
+}

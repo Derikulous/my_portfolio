@@ -1,13 +1,21 @@
-<div class="row">
-  <div class="col-md-7">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h1><%= @post.title %></h1>
-      </div>
-      <div class="panel-body">
-        <p><b>Date:</b> <%= l @post.created_at, format: :short %></p>
-        <p><%= markdown @post.content %></p>
-        <%= link_to 'Back', posts_path, :class => 'btn btn-primary'%>
+<div id="sidebar-container-main">
+  <div class="menuHead">
+    <div class="sidebarMain" id="s-blog">BLOG
+    </div>
+  </div>
+  <div class="menuHeadPhoto">
+  </div>
+</div>
+<div id="portfolioContentContainer">
+  <div id="portfolioContent">
+    <div id="portfolioContentInner">
+      <div class="inner">
+        <div class="portfolioContainer">
+          <h3><%= @post.title %></h3>
+          <%= l @post.created_at, format: :short %>
+          <p><%= markdown @post.content %></p><br />
+          <%= link_to 'Back', posts_path, :class => 'btn btn-default'%>
+        </div>
       </div>
     </div>
   </div>
