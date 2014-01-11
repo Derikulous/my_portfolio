@@ -8,4 +8,7 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def projects_2
+  end
 end

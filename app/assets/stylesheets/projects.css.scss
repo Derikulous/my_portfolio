@@ -8,34 +8,34 @@
   margin-bottom: 10px;
   margin-right: 4px;
 }
-#s-about {
+#s-projects {
   background-position: 0px -135px;
-  background: url("images/about_dark.png") no-repeat scroll 0% 0% transparent;
+  background: url("images/projects_dark.png") no-repeat scroll 0% 0% transparent;
 }
 .sidebarHead {
-  width: 85px;
+  width: 100px;
   height: 50px;
   text-indent: -9999px;
 }
-#accordion {
+#accordionPortfolio {
   font-size: 15px;
   letter-spacing: 0.6px;
   position: absolute;
-  margin-left: 20px;
+  float: left;
   margin-top: 3px;
 }
 a.menu:link {
   text-decoration: none;
-  color: rgb(255, 0, 0);
   outline: medium none;
   overflow: hidden;
 }
 .menu {
   line-height: 19px;
-  color: rgb(195, 0, 0);
+  color: rgb(0, 0, 0);
+  border-bottom: none;
 }
 
-#aboutContent {
+#portfolioContent {
   width: 750px;
   float: left;
   margin: 0px 30px;
@@ -43,10 +43,10 @@ a.menu:link {
   height: 624px;
   overflow: hidden;
 }
-#aboutContent .inner {
+#portfolioContent .inner {
   margin: 20px 22px 20px 17px;
 }
-.galleryContainer {
+.portfolioContainer {
   height: 584px;
   width: 750px;
   overflow: hidden;
@@ -54,7 +54,7 @@ a.menu:link {
   background-position: center center;
   text-align: center;
 }
-.galleryContainer_2 {
+.portfolioContainer_1 {
   height: 584px;
   width: 750px;
   overflow: hidden;
@@ -63,7 +63,7 @@ a.menu:link {
   background: url("images/about_2.png") no-repeat scroll 0% 0% transparent;
   text-align: center;
 }
-#aboutContent .inner a img {
+#portfolioContent .inner a img {
   border: 1px solid rgb(255, 198, 198);
   margin-top: 0px;
   border: medium none;
@@ -90,7 +90,7 @@ i {
   margin-left: 161px;
   margin-right: 55px;
 }
-.aboutCounterContainer {
+.portfolioCounterContainer {
   float: left;
 }
 #portfolioBackDead {
@@ -136,11 +136,12 @@ div.clearer {
   padding: 0px;
   border: 0px solid black;
 }
-.aboutCaption {
+.portfolioCaption {
   float: left;
+  margin-left: 20px;
   width: 480px;
   text-align: center;
-  font: 10.5px/16px "Georgia";
+  font: 12px "Georgia";
   letter-spacing: 0px;
 }
 .portfolioIndexContainer {
