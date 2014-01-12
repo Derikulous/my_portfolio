@@ -6,17 +6,25 @@
   <div class="menuHeadPhoto">
   </div>
 </div>
-<div id="portfolioContentContainer">
-  <div id="portfolioContent">
-    <div id="portfolioContentInner">
-      <div class="inner">
-        <div class="portfolioContainer">
-          <h3><%= @post.title %></h3>
-          <%= l @post.created_at, format: :short %>
-          <p><%= markdown @post.content %></p><br />
-          <%= link_to 'Back', posts_path, :class => 'btn btn-default'%>
+<div id="blogContent">
+  <div id="blogContentInner">
+    <div class="inner">
+      <div class="blogContainer">
+        <div class="blogtitle">
+          <%= @post.title %>
+        </div>
+        <div class="blogdate">
+          <%= l @post.created_at, format: :long %>
+        </div>
+        <div class="blogpost">
+          <%= markdown @post.content %>
         </div>
       </div>
     </div>
   </div>
+</div>
+<div class="blogContainer pull-right">
+  <% if current_user.try(:admin?) %>
+    <%= link_to 'Back', posts_path, :class => 'btn btn-info'%>
+  <% end %>
 </div>

@@ -4,6 +4,7 @@ Portfolio::Application.routes.draw do
   resources :posts
 
   # Custom routes for static pages
+  get '/logout', to: 'pages#signout'
   get '/about', to: 'pages#about'
   get '/about/2', to: 'pages#bio'
   get '/projects', to: 'pages#projects'

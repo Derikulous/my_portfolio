@@ -24,17 +24,10 @@
   margin-left: 20px;
   margin-top: 3px;
 }
-a.menu:link {
-  text-decoration: none;
-  color: rgb(255, 0, 0);
-  outline: medium none;
-  overflow: hidden;
-}
 .menu {
   line-height: 19px;
   color: rgb(195, 0, 0);
 }
-
 #aboutContent {
   width: 750px;
   float: left;
@@ -75,7 +68,7 @@ div.clearer {
   float: left;
   width: 480px;
   text-align: center;
-  font: 10.5px/16px "Georgia";
+  font: 12px/16px "Georgia";
   letter-spacing: 0px;
 }
 .portfolioIndexContainer {

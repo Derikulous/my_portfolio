@@ -11,13 +11,26 @@
 }
 a.menu:link {
   text-decoration: none;
+  color: rgb(102, 102, 102);
   outline: medium none;
   overflow: hidden;
+}
+a:hover, a:focus {
+  color: red;
+  text-decoration: underline;
+}
+i:hover, i:focus {
+  color: red;
+  text-decoration: underline;
+}
+.sidebarHeadPortfolio {
+  width: 100px;
+  height: 50px;
+  text-indent: -9999px;
 }
 .menu {
   line-height: 19px;
   color: rgb(0, 0, 0);
-  border-bottom: none;
 }
 #portfolioContent {
   width: 750px;
@@ -56,10 +69,11 @@ a, img, input {
   outline: medium none;
 }
 .links {
-  border-bottom: 1px solid rgb(175, 175, 175);
+  font-family: 'Sorts Mill Goudy', serif;
+  letter-spacing: 0.9px;
 }
 i {
-  color: rgb(100, 100, 100);
+  color: rgb(0, 0, 0);
 }
 #foot {
   margin: 0px;

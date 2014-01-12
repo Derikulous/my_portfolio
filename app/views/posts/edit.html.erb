@@ -1,6 +1,11 @@
-<h1>Editing post</h1>
+<% if current_user.try(:admin?) %>
+  <div id="blogContent">
+    <h1>Edit Post</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+  <div id="blogContent">
+    <%= link_to 'Show', @post, class: "btn btn-success" %> |
+    <%= link_to 'Back', posts_path, class: "btn btn-info" %>
+  </div>
+<% end %>

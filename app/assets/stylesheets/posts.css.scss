@@ -1,12 +1,13 @@
 .blogtitle {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   text-align: left;
   text-decoration: none;
-  font-family: "Palatino Linotype","ff-tisa-web-pro",Georgia,Cambria,Times,serif;
   display: inline-block;
   color: black;
+  letter-spacing: 0.6px;
   line-height: 34px;
+  font-family: 'Sorts Mill Goudy', serif;
   width: 100%;
 }
 #s-blog {
@@ -14,20 +15,50 @@
   background: url("images/blog_dark.png") no-repeat scroll 0% 0% transparent;
 }
 .blogdate {
-  font-family: "Palatino";
   font-size: 16px;
   text-align: left;
   font-weight: normal;
   margin-bottom: 15px;
   margin-top: 10px;
+  letter-spacing: 0.6px;
+  font-family: 'Sorts Mill Goudy', serif;
   color: rgb(66, 45, 31);
 }
 .blogpost {
   color: rgb(0, 0, 0);
   margin-bottom: 45px;
   clear: both;
-  font-family: "Palatino Linotype","ff-tisa-web-pro",Georgia,Cambria,Times,serif;
+  width: 600px;
+  height: 100%;
   font-size: 18px;
   line-height: 32px;
+  overflow: hidden;
+  background-position: center center;
+  letter-spacing: 0.6px;
+  font-family: 'Sorts Mill Goudy', serif;
   float: left;
+}
+.blogpost a {
+  color: red;
+}
+.blogpost a:hover, a:focus {
+  color: rgb(255, 160, 0);
+  text-decoration: underline;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+#blogContent {
+  width: 750px;
+  float: left;
+  margin: 0px 30px;
+  width: 746px;
+  overflow: hidden;
+}
+.blogContainer {
+  width: 750px;
+  overflow: hidden;
+  margin: 0px auto;
+  background-position: center center;
 }

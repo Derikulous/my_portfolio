@@ -6,52 +6,50 @@
   <div class="menuHeadPhoto">
   </div>
 </div>
-<div id="portfolioContentContainer">
-  <% @posts.each do |post| %>
-  <div id="portfolioContent">
-    <div id="portfolioContentInner">
-      <div class="inner">
-        <div class="portfolioContainer">
-          <div class="blogtitle">
+<% @posts.each do |post| %>
+<div id="blogContent">
+  <div id="blogContentInner">
+    <div class="inner">
+      <div class="blogContainer">
+        <div class="blogtitle">
           <%= link_to post.title, post_path(post) %>
-          </div>
-          <div class="blogdate">
+        </div>
+        <div class="blogdate">
           <%= l post.created_at, format: :long %>
-          </div>
-          <div class="blogpost">
-            <%= markdown post.content %>
-          </div>
+        </div>
+        <div class="blogpost">
+          <%= markdown post.content %>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<% if current_user.try(:admin?) %>
-  <% if post.published? == false && policy(post).publish? %>
-    <%= button_to 'Publish', post_path(post, post: { published: true }),
-  method: :put, class: "btn btn-default" %>
+<div class="blogContainer">
+  <% if current_user.try(:admin?) %>
+    <% if post.published? == false && policy(post).publish? %>
+      <%= button_to 'Publish', post_path(post, post: { published: true }),
+    method: :put, class: "btn btn-default" %>
+    <% end %>
+
+    <% if policy(post).destroy? %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+    <% end %>
+
+    <% if policy(post).update? %>
+      <%= link_to 'Edit Post', edit_post_path(post), class: "btn btn-info" %>
+    <% end %>
+    <% if post.published? && policy(post).publish?%>
+      <%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?'}, :class => 'btn btn-warning' %>
+    <% end %>
+    <div class="label label-success">
+    <%= "Published" if post.published %>
+    <% end %>
+    </div>
   <% end %>
 
-  <% if post.published? && policy(post).publish?%>
-    <%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?'}, :class => 'btn btn-warning' %>
+  <% if current_user.try(:admin?) %>
+    <%= link_to 'New Post', new_post_path, class: "btn btn-primary pull-right"%>
   <% end %>
-
-  <% if policy(post).destroy? %>
-    <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-  <% end %>
-
-  <% if policy(post).update? %>
-    <%= link_to 'Edit Post', edit_post_path(post), class: "btn btn-default" %>
-  <% end %>
-
-  <%= "Published" if post.published %>
-  <% end %>
-<% end %>
-
-
-<br />
-<% if current_user.try(:admin?) %>
-  <%= link_to 'New Post', new_post_path, class: "btn btn-default"%>
-<% end %>
+<div>
 

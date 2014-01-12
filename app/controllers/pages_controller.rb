@@ -9,6 +9,6 @@ class PagesController < ApplicationController
   def about
   end
 
-  def projects_2
+  def signout
   end
 end

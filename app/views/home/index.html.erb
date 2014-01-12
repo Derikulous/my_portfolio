@@ -6,21 +6,15 @@
   <div class="menuHeadPhoto">
   </div>
 </div>
-<div id="portfolioContentContainer">
-  <div id="blogContent">
-    <div id="blogContentInner">
-      <div class="inner">
-        <div class="galleryContainer">
-          <a href="/about">
-            <img src="assets/images/main_quote.png"></img>
-          </a>
-        </div>
+<div id="blogContent">
+  <div id="blogContentInner">
+    <div class="inner">
+      <div class="galleryContainer">
+        <a href="/about">
+          <img src="assets/images/main_quote.png"></img>
+        </a>
       </div>
     </div>
   </div>
 </div>
-<div class="sign_out pull-right">
-  <% if current_user.try (:admin?) %>
-  <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: :btn %>
-  <% end %>
-</div>
+
