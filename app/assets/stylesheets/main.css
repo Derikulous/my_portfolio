@@ -39,7 +39,7 @@ html, body {
   float: left;
   text-indent: -999px;
   color: rgb(101, 102, 110);
-  background: url("images/logo.png") no-repeat scroll transparent;
+  background: url("https://s3-us-west-2.amazonaws.com/portfolioimage/logo.png") no-repeat scroll transparent;
 }
 .navbar-brand a {
   width: 100%;
@@ -80,20 +80,20 @@ html, body {
   height: 100%;
 }
 #blog {
-  background: url("images/blog.png") no-repeat scroll 0% 0% transparent;
+  background: url("https://s3-us-west-2.amazonaws.com/portfolioimage/blog.png") no-repeat scroll 0% 0% transparent;
 }
 #photos {
-  background: url("images/photos.png") no-repeat scroll 0% 0% transparent;
+  background: url("https://s3-us-west-2.amazonaws.com/portfolioimage/photos.png") no-repeat scroll 0% 0% transparent;
 }
 #about {
-  background: url("images/about.png") no-repeat scroll 0% 0% transparent;
+  background: url("https://s3-us-west-2.amazonaws.com/portfolioimage/about.png") no-repeat scroll 0% 0% transparent;
 }
 #projects {
-  background: url("images/projects.png") no-repeat scroll 0% 0% transparent;
+  background: url("https://s3-us-west-2.amazonaws.com/portfolioimage/projects.png") no-repeat scroll 0% 0% transparent;
 }
 #s-developer {
   background-position: 0px -120px;
-  background: url("images/main_ruby.png") no-repeat scroll 0% 0% transparent;
+  background: url("https://s3-us-west-2.amazonaws.com/portfolioimage/main_ruby.png") no-repeat scroll 0% 0% transparent;
 }
 .sidebarMain {
   width: 120px;
@@ -110,7 +110,7 @@ html, body {
   width: 120px;
   height: 120px;
   border-radius: 60px;
-  background: url("images/linkedIn_profile.jpg") no-repeat transparent;
+  background: url("https://s3-us-west-2.amazonaws.com/portfolioimage/linkedIn_profile.jpg") no-repeat transparent;
   margin: 20px auto;
   display: block;
   background-size: auto 120px;
