@@ -11,4 +11,7 @@ class PagesController < ApplicationController
 
   def signout
   end
+
+  def photos
+  end
 end
