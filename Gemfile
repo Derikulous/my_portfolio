@@ -18,7 +18,7 @@ gem 'carrierwave'
 gem 'fog'
 gem 'pygments.rb'
 gem 'redcarpet'
-gem 'friendly_id'
+
 
 group :development, :test do
   gem 'minitest'
