@@ -1,4 +1,4 @@
-<div id="sidebar-container-main">
+<div id="sidebar-container-main" class="col-md-2">
   <div class="menuHead">
     <div class="sidebarMain" id="s-blog">BLOG
     </div>
@@ -6,11 +6,12 @@
   <div class="menuHeadPhoto">
   </div>
 </div>
-<% @posts.each do |post| %>
 <div id="blogContent">
-  <div id="blogContentInner">
-    <div class="inner">
-      <div class="blogContainer">
+  <% if current_user.try(:admin?) %>
+    <%= link_to 'New Post', new_post_path, class: "btn btn-primary pull-right"%>
+  <% end %>
+  <% @posts.each do |post| %>
+      <div class="inner">
         <div class="blogtitle">
           <%= link_to post.title, post_path(post) %>
         </div>
@@ -19,13 +20,9 @@
         </div>
         <div class="blogpost">
           <%= markdown post.content %>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        </div><!-- blogpost -->
+      </div><!-- inner -->
 
-<div class="blogContainer">
   <% if current_user.try(:admin?) %>
     <% if post.published? == false && policy(post).publish? %>
       <%= button_to 'Publish', post_path(post, post: { published: true }),
@@ -39,17 +36,13 @@
     <% if policy(post).update? %>
       <%= link_to 'Edit Post', edit_post_path(post), class: "btn btn-info" %>
     <% end %>
+
     <% if post.published? && policy(post).publish?%>
       <%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?'}, :class => 'btn btn-warning' %>
     <% end %>
-    <div class="label label-success">
+    <div class="btn btn-success">
     <%= "Published" if post.published %>
-    <% end %>
     </div>
   <% end %>
-
-  <% if current_user.try(:admin?) %>
-    <%= link_to 'New Post', new_post_path, class: "btn btn-primary pull-right"%>
-  <% end %>
-<div>
-
+<% end %>
+</div><!-- blogContent -->

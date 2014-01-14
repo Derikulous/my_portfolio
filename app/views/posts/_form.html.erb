@@ -13,11 +13,11 @@
   <div id="blogContent">
     <div class="field">
       <%= f.label :title %><br />
-      <%= f.text_field :title %>
+      <%= f.text_field :title, style: "width: 300px" %>
     </div>
-    <div class="textfield">
+    <div>
       <%= f.label :content %><br />
-      <%= f.text_area :content %>
+      <%= f.text_area :content, style: "width: 700px" %>
     </div>
     <div>
       <%= f.file_field :image %>

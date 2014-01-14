@@ -1,4 +1,4 @@
-<div id="sidebar-container-main">
+<div id="sidebar-container-main" class="col-md-2">
   <div class="menuHead">
     <div class="sidebarMain" id="s-blog">BLOG
     </div>
@@ -7,23 +7,20 @@
   </div>
 </div>
 <div id="blogContent">
-  <div id="blogContentInner">
-    <div class="inner">
-      <div class="blogContainer">
-        <div class="blogtitle">
-          <%= @post.title %>
-        </div>
-        <div class="blogdate">
-          <%= l @post.created_at, format: :long %>
-        </div>
-        <div class="blogpost">
-          <%= markdown @post.content %>
-        </div>
-      </div>
+  <div class="inner">
+    <div class="blogtitle">
+      <%= @post.title %>
+    </div>
+    <div class="blogdate">
+      <%= l @post.created_at, format: :long %>
+    </div>
+    <div class="blogpost">
+      <%= markdown @post.content %>
     </div>
   </div>
 </div>
-<div class="blogContainer pull-right">
+
+<div id="blogContainer pull-right">
   <% if current_user.try(:admin?) %>
     <%= link_to 'Back', posts_path, :class => 'btn btn-info'%>
   <% end %>

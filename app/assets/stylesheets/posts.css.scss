@@ -29,7 +29,6 @@
   margin-bottom: 45px;
   clear: both;
   width: 600px;
-  height: 100%;
   font-size: 18px;
   line-height: 32px;
   overflow: hidden;
@@ -53,15 +52,9 @@ a {
   width: 750px;
   float: left;
   margin: 0px 30px;
-  width: 746px;
   overflow: hidden;
 }
 #blogContent .inner {
   margin: 20px 22px 20px 17px;
 }
-.blogContainer {
-  width: 750px;
-  overflow: hidden;
-  margin: 0px auto;
-  background-position: center center;
-}
+
