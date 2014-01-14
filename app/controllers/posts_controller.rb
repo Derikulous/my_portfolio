@@ -5,12 +5,12 @@ class PostsController < ApplicationController
     if current_user
       @posts = policy_scope(Post)
     else
-      @posts = Post.where(published: true)
+      @posts = Post.where(published: true).order('created_at DESC')
     end
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find(params[:id]).order('created_at DESC')
   end
 
   def new
