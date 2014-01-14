@@ -108,7 +108,7 @@ html, body {
   width: 120px;
   height: 120px;
   border-radius: 60px;
-  background: url("https://s3-us-west-2.amazonaws.com/portfolioimage/linkedIn_profile.jpg") no-repeat transparent;
+  background: url("https://s3-us-west-2.amazonaws.com/portfolioimage/profile_photo.jpg") no-repeat transparent;
   margin: 20px auto;
   display: block;
   background-size: auto 120px;
