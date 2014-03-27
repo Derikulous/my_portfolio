@@ -132,6 +132,13 @@ i {
   text-indent: -99999px;
   float: left;
 }
+#portfolioNext4 {
+  width: 50px;
+  height: 16px;
+  background: url("https://s3-us-west-2.amazonaws.com/portfolioimage/next.png") no-repeat scroll -30px -15px transparent;
+  text-indent: -99999px;
+  float: left;
+}
 #portfolioNextDead {
   width: 50px;
   height: 16px;
@@ -152,6 +159,11 @@ i {
   cursor: pointer;
 }
 #portfolioNext3 a {
+  display: block;
+  outline: medium none;
+  cursor: pointer;
+}
+#portfolioNext4 a {
   display: block;
   outline: medium none;
   cursor: pointer;
