@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
+
 ruby '2.1.0'
+
 gem 'rails', '3.2.14'
 
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
@@ -15,7 +17,7 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'newrelic_rpm'
 gem 'rmagick'
 gem 'carrierwave'
-gem 'fog'
+gem "fog", "~> 1.3.1"
 gem 'pygments.rb'
 gem 'redcarpet'
 gem 'friendly_id'
