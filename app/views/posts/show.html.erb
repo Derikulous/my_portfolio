@@ -23,6 +23,6 @@
 <div id="blogContainer pull-right">
   <% if current_user.try(:admin?) %>
     <%= link_to 'Back', posts_path, class: 'btn btn-info' %>
-    <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-success' %>
+    <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-success' %>
   <% end %>
 </div>
