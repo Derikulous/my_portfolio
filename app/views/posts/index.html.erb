@@ -10,6 +10,7 @@
   <% if current_user.try(:admin?) %>
     <%= link_to 'New Post', new_post_path, class: "btn btn-primary pull-right"%>
   <% end %>
+
   <% @posts.each do |post| %>
       <div class="inner">
         <div class="blogtitle">
@@ -19,7 +20,12 @@
           <%= l post.created_at, format: :long %>
         </div>
         <div class="blogpost">
-          <%= markdown post.content %>
+          <% if post.content.length > 250 %>
+            <%= markdown post.content.truncate(250) %>
+            <%= link_to '...Read on ->', post_path(post) %>
+          <% else %>
+            <%= markdown post.content %>
+          <% end %>
         </div><!-- blogpost -->
       </div><!-- inner -->
 
