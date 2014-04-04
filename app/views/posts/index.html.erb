@@ -20,8 +20,8 @@
           <%= l post.created_at, format: :long %>
         </div>
         <div class="blogpost">
-          <% if post.content.length > 250 %>
-            <%= markdown post.content.truncate(250) %>
+          <% if post.content.length > 400 %>
+            <%= markdown post.content.truncate(400) %>
             <%= link_to '...Read on ->', post_path(post) %>
           <% else %>
             <%= markdown post.content %>
