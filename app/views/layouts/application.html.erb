@@ -16,35 +16,6 @@
   <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<!--   <div id="globalContainer">
-    <div id="header">
-      <a class="navbar-brand" href="/">DERIK STRATTAN</a>
-      <div id="nav-menu">
-        <ul>
-          <li id="blog">
-            <a href= <%= posts_path %> >
-              BLOG
-            </a>
-          </li>
-          <li id="photos">
-            <a href="/photos/">
-              PHOTOS
-            </a>
-          </li>
-          <li id="projects">
-            <a href="/projects/">
-              PROJECTS
-            </a>
-          </li>
-          <li id="about">
-            <a href= <%= about_path %> >
-              ABOUT
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div> -->
 
   <% flash.each do |key, value| %>
   <div class="<%= flash_class(key) %>">
@@ -53,8 +24,6 @@
   <% end %>
 
   <%= yield %>
-
-</div>
 
   </body>
 
