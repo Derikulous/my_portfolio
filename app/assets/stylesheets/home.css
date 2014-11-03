@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Didot';
+  src: url('/assets/fonts/Didot-HTF-L96-Light.otf');
+}
+body {
+  background-color: #dfdfdf;
+}
+.text-center {
+  font-family: 'Actor', sans-serif;
+  font-size: 6rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.home {
+  background-color: #dfdfdf;
+  height: 20em;
+}
+
+.page-header {
+  padding: 10% 0;
+  border-color: white;
+}
+
+.navbar {
+  margin-top: 5%;
+  position: relative;
+}
+
+.about-header {
+  font-size: 3rem;
+  font-family: 'Didot', serif;
+  left: 27%;
+}
+
+.photo-header {
+  font-size: 3rem;
+  font-family: 'Didot', serif;
+  left: 37%;
+}
+
+.blog-header {
+  font-size: 3rem;
+  font-family: 'Didot', serif;
+  left: 47%;
+}

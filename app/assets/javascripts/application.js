@@ -15,4 +15,7 @@
 //= require bootstrap
 //= require skrollr
 //= require skrollr.menu
+//= require lettering
+//= require textillate
+//= require snowstorm-min
 //= require_tree .

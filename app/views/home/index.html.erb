@@ -1,20 +1,24 @@
-<div id="sidebar-container-main">
-  <div class="menuHead">
-    <div class="sidebarMain" id="s-developer">Ruby on Rails
-    </div>
-  </div>
-  <div class="menuHeadPhoto">
+<div class="container home aria-hidden=false">
+  <div class="col-lg-12 page-header aria-hidden=true">
+    <h1 class="text-center animate aria-hidden=true aria-label=page_title">Derik Strattan</h1>
   </div>
 </div>
-<div id="blogContent">
-  <div id="blogContentInner">
-    <div class="inner">
-      <div class="galleryContainer">
-        <a href="/about">
-          <%= image_tag "https://s3-us-west-2.amazonaws.com/portfolioimage/main_quote.png" %>
-        </a>
-      </div>
-    </div>
+<div class="container navbar aria-hidden=true">
+  <div class="col-md-1 about-header aria-hidden=true">
+    <a href=<%= about_path %> >
+      <div class="about-section aria-hidden=false aria-label=about-section">About</div>
+    </a>
+  </div>
+  <div class="col-md-1 photo-header aria-hidden=true">
+    <a href="/photos/">
+      <div class="photo-section aria-hidden=false aria-label=photos">Photos</div>
+    </a>
+  </div>
+  <div class="col-md-1 blog-header aria-hidden=true">
+    <a href=<%= posts_path %> >
+      <div class="blog-section aria-hidden=false aria-label=blog">Blog</div>
+    </a>
   </div>
 </div>
+
 
