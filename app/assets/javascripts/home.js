@@ -46,7 +46,7 @@ var setupAnimate = function(){
     selector: '.texts',
     loop: false,
     minDisplayTime: 3000,
-    initialDelay: 2600,
+    initialDelay: 3000,
     autoStart: true,
 
     in: {
@@ -60,7 +60,7 @@ var setupAnimate = function(){
     selector: '.texts',
     loop: false,
     minDisplayTime: 3000,
-    initialDelay: 2600,
+    initialDelay: 3400,
     autoStart: true,
 
     in: {

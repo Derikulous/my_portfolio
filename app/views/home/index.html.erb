@@ -1,24 +1,26 @@
-<div class="container home aria-hidden=false">
-  <div class="col-lg-12 page-header aria-hidden=true">
-    <h1 class="text-center animate aria-hidden=true aria-label=page_title">Derik Strattan</h1>
+<div id="home" class="container aria-hidden=false">
+  <div class="row">
+    <div class="col-lg-12 col-xs-12 page-header aria-hidden=true">
+      <h1 class="text-center animate aria-hidden=true aria-label=page_title" id="name">Derik Strattan</h1>
+    </div>
   </div>
 </div>
 <div class="container navbar aria-hidden=true">
-  <div class="col-md-2 about-header aria-hidden=true">
-    <a href=<%= about_path %> >
-      <div class="about-section aria-hidden=false aria-label=about-section">About</div>
-    </a>
-  </div>
-  <div class="col-md-2 photo-header aria-hidden=true">
-    <a href="/photos/">
-      <div class="photo-section aria-hidden=false aria-label=photos">Photos</div>
-    </a>
-  </div>
-  <div class="col-md-2 blog-header aria-hidden=true">
-    <a href=<%= posts_path %> >
-      <div class="blog-section aria-hidden=false aria-label=blog">Blog</div>
-    </a>
+  <div class="row">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 .col-md-offset-4 about-header aria-hidden=true">
+      <a href=<%= about_path %> >
+        <div class="about-section aria-hidden=false aria-label=about-section">About</div>
+      </a>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 photo-header aria-hidden=true">
+      <a href="/photos/">
+        <div class="photo-section aria-hidden=false aria-label=photos">Photos</div>
+      </a>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 blog-header aria-hidden=true">
+      <a href=<%= posts_path %> >
+        <div class="blog-section aria-hidden=false aria-label=blog">Blog</div>
+      </a>
+    </div>
   </div>
 </div>
-
-

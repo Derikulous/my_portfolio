@@ -2,52 +2,32 @@
   font-family: 'Didot';
   src: url('/assets/fonts/Didot-HTF-L96-Light.otf');
 }
-@font-face {
-  font-family: 'Vitesse';
-  src: url('/assets/fonts/Vitesse-Light.otf');
-}
+
 body {
   background-color: #dfdfdf;
 }
-.text-center {
+#home {
   font-family: 'Lato', sans-serif;
-  font-size: 6rem;
-  font-weight: 200;
-  line-height: 1.125rem;
-  letter-spacing: 0.04rem;
+  font-size: 15rem;
+  line-height: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.home {
+  letter-spacing: 0.2em;
   background-color: #dfdfdf;
-  height: 20em;
 }
 
 .page-header {
-  padding: 10% 0;
+  padding: 7% 0;
   border-color: white;
 }
 
 .navbar {
-  margin-top: 5%;
+  margin-top: 3%;
   position: relative;
+  font-size: 3rem;
+  font-family: 'Didot', serif;
 }
 
 .about-header {
-  font-size: 3rem;
-  font-family: 'Didot', serif;
-  left: 27%;
+  margin-left: 25%;
 }
 
-.photo-header {
-  font-size: 3rem;
-  font-family: 'Didot', serif;
-  left: 29%;
-}
-
-.blog-header {
-  font-size: 3rem;
-  font-family: 'Didot', serif;
-  left: 32%;
-}
