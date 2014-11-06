@@ -16,18 +16,22 @@ body {
 }
 
 .page-header {
-  padding: 7% 0;
+  padding: 5% 0;
   border-color: white;
 }
 
 .navbar {
   margin-top: 3%;
   position: relative;
-  font-size: 3rem;
   font-family: 'Didot', serif;
+  font-size: 2rem;
 }
 
 .about-header {
   margin-left: 25%;
 }
 
+.navbar a:hover, a:focus {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
