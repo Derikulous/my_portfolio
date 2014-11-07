@@ -14,23 +14,25 @@ body {
   letter-spacing: 0.2em;
   background-color: #dfdfdf;
 }
-
 .page-header {
   padding: 5% 0;
   border-color: white;
 }
-
 .navbar {
   margin-top: 3%;
   position: relative;
   font-family: 'Didot', serif;
   font-size: 2rem;
 }
-
-.about-header {
-  margin-left: 25%;
+.about-section {
+  text-align: center;
 }
-
+.photo-section {
+  text-align: center;
+}
+.blog-section {
+  text-align: center;
+}
 .navbar a:hover, a:focus {
   color: rgb(0, 0, 0);
   text-decoration: underline;

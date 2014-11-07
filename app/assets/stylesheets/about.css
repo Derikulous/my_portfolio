@@ -1,8 +1,8 @@
-.about-section {
+.about-header {
   margin-top: 5em;
   width: 50%;
 }
-.about-section a:hover, a:focus {
+.about-header a:hover, a:focus {
   color: rgb(191, 108, 55);
 }
 .link-header{
