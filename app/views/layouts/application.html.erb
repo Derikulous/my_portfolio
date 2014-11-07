@@ -9,7 +9,7 @@
   <%= csrf_meta_tags %>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Derik Strattan" content="Derik's personal portfolio">
+  <meta name="Derik Strattan | Ruby on Rails Developer" content="Derik's personal portfolio">
 
   <link rel="shortcut icon" href="Favicon.ico">
 
@@ -19,9 +19,9 @@
 <body>
 
   <% flash.each do |key, value| %>
-  <div class="<%= flash_class(key) %>">
-    <%= value %>
-  </div>
+    <div class="<%= flash_class(key) %>">
+      <%= value %>
+    </div>
   <% end %>
 
   <%= yield %>

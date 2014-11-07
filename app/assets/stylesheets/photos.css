@@ -1,4 +1,11 @@
-#s-photo {
-  background-position: 0px -120px;
-  background: url("https://s3-us-west-2.amazonaws.com/portfolioimage/photos_dark.png") no-repeat scroll 0% 0% transparent;
+#photos {
+  margin-top: 5em;
+  width: 55%;
+}
+.bottom-navbar {
+  text-align: center;
+}
+.photoCaption {
+
+  font-family: 'Lato', sans-serif;
 }
