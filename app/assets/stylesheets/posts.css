@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Didot';
+  src: url('/assets/fonts/Didot-HTF-L96-Light.otf');
+}
+
 .blog-title {
   font-family: 'Didot', serif;
   font-size: 4rem;
