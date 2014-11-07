@@ -1,29 +1,26 @@
-<div id="sidebar-container-main" class="col-md-2">
-  <div class="menuHead">
-    <div class="sidebarMain" id="s-blog">BLOG
-    </div>
-  </div>
-  <div class="menuHeadPhoto">
-  </div>
-</div>
-<div id="blogContent">
-  <div class="inner">
-    <div class="blogtitle">
+<div class="container">
+  <div class="row row-centered">
+    <div class="col-lg-6 col-md-4 col-sm-6 col-xs-6 col-centered blog-title">
       <%= @post.title %>
     </div>
-    <div class="blogdate">
+  </div>
+  <div class="row row-centered">
+    <div class="col-lg-6 col-centered blog-date">
       <%= l @post.created_at, format: :long %>
     </div>
-    <div class="blogpost">
-      <%= markdown @post.content %>
-    </div>
-      <%= render 'thread' %>
   </div>
+</div><!-- container -->
+
+<div class="container">
+  <div class="col-lg-6 col-lg-offset-3 col-centered blog-post">
+    <%= markdown @post.content %>
+  </div>
+  <%= render 'thread' %>
 </div>
 
-<div id="blogContainer pull-right">
+<div id="container pull-right">
   <% if current_user.try(:admin?) %>
-    <%= link_to 'Back', posts_path, class: 'btn btn-info' %>
-    <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-success' %>
+  <%= link_to 'Back', posts_path, class: 'btn btn-info' %>
+  <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-success' %>
   <% end %>
 </div>

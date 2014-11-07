@@ -1,33 +1,34 @@
-<div id="sidebar-container-main" class="col-md-2">
-  <div class="menuHead">
-    <div class="sidebarMain" id="s-blog">BLOG
-    </div>
-  </div>
-  <div class="menuHeadPhoto">
-  </div>
-</div>
-<div id="blogContent">
+<div class="row pull-right">
   <% if current_user.try(:admin?) %>
     <%= link_to 'New Post', new_post_path, class: "btn btn-primary pull-right"%>
   <% end %>
+</div>
 
-  <% @posts.each do |post| %>
-      <div class="inner">
-        <div class="blogtitle">
-          <%= link_to post.title, post_path(post) %>
-        </div>
-        <div class="blogdate">
+<% @posts.each do |post| %>
+  <div class="container">
+    <div class="row row-centered">
+      <div class="col-lg-6 col-md-4 col-sm-6 col-xs-6 col-centered blog-title">
+        <%= link_to post.title, post_path(post) %>
+      </div>
+    </div>
+      <div class="row row-centered">
+        <div class="col-lg-6 col-centered blog-date">
           <%= l post.created_at, format: :long %>
         </div>
-        <div class="blogpost">
-          <% if post.content.length > 400 %>
-            <%= markdown post.content.truncate(400) %>
-            <%= link_to '...Read on ->', post_path(post) %>
-          <% else %>
-            <%= markdown post.content %>
-          <% end %>
-        </div><!-- blogpost -->
-      </div><!-- inner -->
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-lg-6 col-lg-offset-3 col-centered blog-post">
+        <% if post.content.length > 250 %>
+          <%= markdown post.content.truncate(250) %>
+          <%= link_to '...Read on ->', post_path(post) %>
+        <% else %>
+          <%= markdown post.content %>
+        <% end %>
+      </div><!-- blogpost -->
+    </div>
+    <br />
+
 
   <% if current_user.try(:admin?) %>
     <% if post.published? == false && policy(post).publish? %>

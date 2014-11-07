@@ -1,62 +1,25 @@
-/*keep this style for posts?*/
-
-.blogtitle {
-  font-weight: bold;
-  font-size: 22px;
-  text-align: left;
-  text-decoration: none;
-  display: inline-block;
-  color: black;
-  letter-spacing: 0.6px;
-  line-height: 34px;
-  font-family: 'Sorts Mill Goudy', serif;
-  width: 100%;
+.blog-title {
+  font-family: 'Didot', serif;
+  font-size: 4rem;
 }
-#s-blog {
-  background-position: 0px -135px;
-  background: url("https://s3-us-west-2.amazonaws.com/portfolioimage/blog_dark.png") no-repeat scroll 0% 0% transparent;
+.blog-date {
+  font-family: 'Didot', serif;
+  font-size: 1.5rem;
+  margin-bottom: 2%;
 }
-.blogdate {
-  font-size: 16px;
-  text-align: left;
-  font-weight: normal;
-  margin-bottom: 15px;
-  margin-top: 10px;
-  letter-spacing: 0.6px;
-  font-family: 'Sorts Mill Goudy', serif;
-  color: rgb(66, 45, 31);
+.blog-post {
+  font-family: 'Didot', serif;
+  font-size: 2rem;
 }
-.blogpost {
-  color: rgb(0, 0, 0);
-  margin-bottom: 45px;
-  clear: both;
-  width: 600px;
-  font-size: 18px;
-  line-height: 32px;
-  overflow: hidden;
-  background-position: center center;
-  letter-spacing: 0.6px;
-  font-family: 'Sorts Mill Goudy', serif;
-  float: left;
+/* centered columns styles */
+.row-centered {
+    text-align:center;
 }
-.blogpost a {
-  color: red;
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
 }
-.blogpost a:hover, a:focus {
-  color: rgb(255, 160, 0);
-  text-decoration: underline;
-}
-a {
-  color: black;
-  text-decoration: none;
-}
-#blogContent {
-  width: 750px;
-  float: left;
-  margin: 0px 30px;
-  overflow: hidden;
-}
-#blogContent .inner {
-  margin: 20px 22px 20px 17px;
-}
-
