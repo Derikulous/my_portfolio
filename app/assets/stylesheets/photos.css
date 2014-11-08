@@ -1,8 +1,3 @@
-@font-face {
-  font-family: 'Didot';
-  src: url('/assets/fonts/Didot-HTF-L96-Light.otf');
-}
-
 #photos {
   margin-top: 5em;
   width: 55%;
@@ -11,6 +6,5 @@
   text-align: center;
 }
 .photoCaption {
-
   font-family: 'Lato', sans-serif;
 }

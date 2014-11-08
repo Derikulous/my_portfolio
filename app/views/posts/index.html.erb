@@ -3,6 +3,9 @@
     <%= link_to 'New Post', new_post_path, class: "btn btn-primary pull-right"%>
   <% end %>
 </div>
+<div class="home-link">
+    <%= link_to "<<", root_path %>
+  </div>
 
 <% @posts.each do |post| %>
   <div class="container">
