@@ -1,8 +1,3 @@
-@font-face {
-  font-family: 'Didot';
-  src: url('/assets/fonts/Didot-HTF-L96-Light.otf');
-}
-
 body {
   background-color: #dfdfdf;
 }
@@ -19,19 +14,29 @@ body {
   border-color: white;
 }
 .navbar {
+  color: #000;
   margin-top: 3%;
   position: relative;
-  font-family: 'Actor', serif;
+  font-family: 'Merriweather', serif;
   font-size: 2rem;
 }
 .about-section {
   text-align: center;
 }
+.about-section a:hover, a:focus {
+  color: rgb(191, 108, 55);
+}
 .photo-section {
   text-align: center;
 }
+.photo-section a:hover, a:focus {
+  color: rgb(191, 108, 55);
+}
 .blog-section {
   text-align: center;
+}
+.blog-section a:hover, a:focus {
+  color: rgb(191, 108, 55);
 }
 .navbar a:hover, a:focus {
   color: rgb(0, 0, 0);
