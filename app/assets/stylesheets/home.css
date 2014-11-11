@@ -14,7 +14,6 @@ body {
   border-color: white;
 }
 .navbar {
-  color: #000;
   margin-top: 3%;
   position: relative;
   font-family: 'Merriweather', serif;
@@ -22,23 +21,13 @@ body {
 }
 .about-section {
   text-align: center;
-}
-.about-section a:hover, a:focus {
-  color: rgb(191, 108, 55);
+  color: #000;
 }
 .photo-section {
   text-align: center;
-}
-.photo-section a:hover, a:focus {
-  color: rgb(191, 108, 55);
+  color: #000;
 }
 .blog-section {
   text-align: center;
-}
-.blog-section a:hover, a:focus {
-  color: rgb(191, 108, 55);
-}
-.navbar a:hover, a:focus {
-  color: rgb(0, 0, 0);
-  text-decoration: underline;
+  color: #000;
 }
