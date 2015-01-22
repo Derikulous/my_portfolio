@@ -2,16 +2,11 @@
   <div class="project" id="<%= dom_id(project) %>">
     Project name: <h3><%= project.name %></h3>
     Technologies used: <p><%= project.technologies_used %></p>
-    <div class="nav">
-      <%= link_to 'Add Comment', project %> |
-      <%= link_to 'Edit', edit_project_path(project) %> |
-      <%= link_to 'Destroy', project, method: :delete, data: {confirm: 'Are you sure?'} %>
-    </div>
   </div>
 <% end %>
 
 <br />
 
 <% if current_user.try(:admin?) %>
-  <%= link_to 'New Project', new_project_path %>
+  <%= link_to 'New Project', new_project_path, class: "btn btn-primary" %>
 <% end %>

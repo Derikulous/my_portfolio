@@ -1,11 +1,8 @@
-<div class="row pull-right">
+<div class="row col-md-offset-4">
   <% if current_user.try(:admin?) %>
-    <%= link_to 'New Post', new_post_path, class: "btn btn-primary pull-right"%>
+    <%= link_to 'New Post', new_post_path, class: "btn btn-primary"%>
   <% end %>
 </div>
-<div class="home-link">
-    <%= link_to "<<", root_path %>
-  </div>
 
 <% @posts.each do |post| %>
   <div class="container">
@@ -32,15 +29,17 @@
     </div>
     <br />
 
-
+<div class="home-link">
+    <%= link_to "<<", root_path %>
+  </div>
   <% if current_user.try(:admin?) %>
     <% if post.published? == false && policy(post).publish? %>
       <%= button_to 'Publish', post_path(post, post: { published: true }),
-    method: :put, class: "btn btn-default" %>
+    method: :put, class: "btn btn-default col-md-offset-4" %>
     <% end %>
 
     <% if policy(post).destroy? %>
-      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger col-md-offset-4" %>
     <% end %>
 
     <% if policy(post).update? %>
@@ -57,6 +56,3 @@
 <% end %>
 </div><!-- blogContent -->
 
-<script>
-snowStorm.stop()
-</script>

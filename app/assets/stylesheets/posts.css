@@ -2,18 +2,21 @@
   font-family: 'Lato', sans-serif;
   font-size: 3rem;
   margin-top: 3%;
+  color: rgb(255, 0, 50);
 }
 .blog-title a {
-  color: #000;
+  color: white;
 }
 .blog-date {
   font-family: 'Merriweather', serif;
   font-size: 1.25rem;
   margin-bottom: 2%;
+  color: rgb(230,230,230);
 }
 .blog-post {
   font-family: 'Merriweather', serif;
   font-size: 1.75rem;
+  color: white;
 }
 /* centered columns styles */
 .row-centered {

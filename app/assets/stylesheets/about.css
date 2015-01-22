@@ -2,27 +2,30 @@
   margin-top: 5em;
   width: 50%;
 }
-.about-header a:hover, a:focus {
-  color: rgb(191, 108, 55);
-}
-.link-header{
-  font-family: 'Didot', serif;
-  font-size: 2rem;
-  margin-top: 3%;
-}
 .links {
-  text-decoration: underline;
   text-align: center;
+  color: white;
+  text-decoration: none;
 }
 .resume {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.5rem;
+  font-family: 'Didot', serif;
+  font-size: 2rem;
   margin-top: 1.5%;
   text-align: center;
+  color: white;
+}
+a.resume:link {
   text-decoration: underline;
+  outline: medium none;
+  overflow: hidden;
+  color: white;
 }
 .home-link {
   font-family: 'Lato', serif;
   font-size: 1rem;
-  text-decoration: underline;
+}
+.title-text {
+  font-family: 'Didot', serif;
+  font-size: 3rem;
+  color: rgb(205,255,205);
 }
